@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: #1a1a1a;
+}
+
+/* Promo bar slider */
+.promo-bar {
+    overflow: hidden;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.promo-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.promo-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.promo-slide.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.promo-slide.exit {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.promo-link {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.promo-bold {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.promo-slide:nth-child(1) {
+    background-color: #c9dcea;
+    color: #1a1a1a;
+}
+.promo-slide:nth-child(1) .promo-link {
+    color: #1a1a1a;
+}
+
+.promo-slide:nth-child(2) {
+    background-color: #5c6e52;
+    color: #ffffff;
+}
+.promo-slide:nth-child(2) .promo-link {
+    color: #ffffff;
+}
+
+.promo-slide:nth-child(3) {
+    background-color: #f5ecd7;
+    color: #1a1a1a;
+}
+.promo-slide:nth-child(3) .promo-link {
+    color: #1a1a1a;
+}
+
+/* Header main row */
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    border-bottom: 1px solid #e5e5e2; /* Orijinal incə xətt */
+}
+
+.nav-left ul {
+    display: flex;
+    list-style: none;
+    gap: 36px;
+}
+
+.nav-left ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.has-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* "ABOUT ∨" quş işarəsi */
+.arrow-down {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid #1a1a1a;
+    border-bottom: 1.5px solid #1a1a1a;
+    transform: rotate(45deg);
+    margin-top: -4px;
+}
+
+.join-fight {
+    color: #1a1a1a;
+    font-weight: 400;
+}
+
+/* LOQONUN MÜKƏMMƏL NİZAMLAMASI */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo a {
+    display: block;
+    width: 145px;   /* Orijinal saytdakı dəqiq loqo eni */
+    height: 38px;   /* Orijinal saytdakı dəqiq loqo hündürlüyü */
+}
+
+.logo svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.search-box {
+    background-color: #f2f2f0;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.search-icon {
+    font-size: 14px;
+    opacity: 0.5;
+    order: -1;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    color: #1a1a1a;
+    order: 1;
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+.cart-icon {
+    background-color: #f2f2f0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
