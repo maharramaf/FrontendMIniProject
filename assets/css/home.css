@@ -91,25 +91,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 60px;
-    border-bottom: 1px solid #e5e5e2; /* Orijinal incə xətt */
+    padding: 18px 40px;
 }
 
 .nav-left ul {
     display: flex;
     list-style: none;
-    gap: 36px;
+    gap: 32px;
 }
 
 .nav-left ul li a {
     text-decoration: none;
     color: #1a1a1a;
-    font-weight: 500;
-    font-size: 12px;
-    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
     font-family: Arial, sans-serif;
 }
 
@@ -119,62 +116,53 @@ body {
     gap: 6px;
 }
 
-/* "ABOUT ∨" quş işarəsi */
 .arrow-down {
     display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-right: 1.5px solid #1a1a1a;
-    border-bottom: 1.5px solid #1a1a1a;
+    width: 7px;
+    height: 7px;
+    border-right: 1.5px solid #555;
+    border-bottom: 1.5px solid #555;
     transform: rotate(45deg);
-    margin-top: -4px;
+    margin: 0;
+    transition: transform 0.2s ease;
 }
 
 .join-fight {
     color: #1a1a1a;
     font-weight: 400;
-}
-
-/* LOQONUN MÜKƏMMƏL NİZAMLAMASI */
-.logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 4px;
 }
 
 .logo a {
-    display: block;
-    width: 145px;   /* Orijinal saytdakı dəqiq loqo eni */
-    height: 38px;   /* Orijinal saytdakı dəqiq loqo hündürlüyü */
-}
-
-.logo svg {
-    width: 100%;
-    height: 100%;
-    display: block;
+    font-size: 32px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-family: 'Georgia', serif;
+    font-style: italic;
 }
 
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
 }
 
 .search-box {
     background-color: #f2f2f0;
     border-radius: 30px;
     padding: 10px 20px;
-    width: 260px;
+    width: 320px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     gap: 10px;
 }
 
 .search-icon {
     font-size: 14px;
     opacity: 0.5;
-    order: -1;
 }
 
 .search-box input {
@@ -184,7 +172,6 @@ body {
     font-size: 14px;
     width: 100%;
     color: #1a1a1a;
-    order: 1;
 }
 
 .search-box input::placeholder {
@@ -192,13 +179,71 @@ body {
 }
 
 .cart-icon {
-    background-color: #f2f2f0;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
+    position: relative;
+    width: 34px;
+    height: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 14px;
+}
+
+.pot-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.cart-count {
+    position: absolute;
+    bottom: -2px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    min-width: 220px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    padding: 12px 25px;
+    text-transform: none;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.3px;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f7f7f5;
+}
+
+.dropdown:hover .arrow-down {
+    transform: rotate(225deg);
+    margin-top: 3px;
 }
