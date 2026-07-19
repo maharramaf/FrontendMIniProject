@@ -58,12 +58,16 @@ function openCart(event) {
     event.preventDefault();
     cartPanel.classList.add("open");
     cartOverlay.classList.add("open");
+    document.documentElement.classList.add("no-scroll");
+    document.body.classList.add("no-scroll");
 }
 
 function closeCart(event) {
     event.preventDefault();
     cartPanel.classList.remove("open");
     cartOverlay.classList.remove("open");
+    document.documentElement.classList.remove("no-scroll");
+    document.body.classList.remove("no-scroll");
 }
 
 if (cartIcon && cartPanel && cartOverlay) {
