@@ -143,3 +143,44 @@ subDropdowns.forEach((subDropdown) => {
     menu.addEventListener("mouseleave", scheduleClose);
 
 });
+
+/* Social proof carousel */
+const socialTrack = document.querySelector(".social-track");
+const socialPrev = document.querySelector(".social-arrows .prev");
+const socialNext = document.querySelector(".social-arrows .next");
+
+if (socialTrack && socialPrev && socialNext) {
+
+    const scrollAmount = 254;
+
+    socialNext.addEventListener("click", () => {
+        socialTrack.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+
+    socialPrev.addEventListener("click", () => {
+        socialTrack.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+
+}
+
+/* Sweepstakes video toggle */
+const sweepstakesVideo = document.querySelector(".sweepstakes-video");
+const sweepstakesVideoToggle = document.querySelector(".sweepstakes-video-toggle");
+
+if (sweepstakesVideo && sweepstakesVideoToggle) {
+
+    sweepstakesVideoToggle.addEventListener("click", () => {
+
+        const icon = sweepstakesVideoToggle.querySelector("i");
+
+        if (sweepstakesVideo.paused) {
+            sweepstakesVideo.play();
+            icon.className = "fa-solid fa-pause";
+        } else {
+            sweepstakesVideo.pause();
+            icon.className = "fa-solid fa-play";
+        }
+
+    });
+
+}
