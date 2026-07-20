@@ -11,7 +11,6 @@ html {
 body {
     font-family: Georgia, serif;
     color: #1a1a1a;
-    overflow-x: hidden;
 }
 
 html.no-scroll,
@@ -260,7 +259,8 @@ header {
 
 .mega-promo {
     position: relative;
-    flex: 1.3;
+    flex: 1.5;
+    min-width: 0;
     border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
@@ -270,8 +270,8 @@ header {
 
 .mega-promo img {
     width: 100%;
-    aspect-ratio: 664 / 552;
     height: auto;
+    aspect-ratio: 437 / 404;
     object-fit: cover;
     display: block;
 }
@@ -346,6 +346,8 @@ header {
     text-decoration: none;
     font-family: Arial, sans-serif;
     font-size: 13px;
+    width: fit-content;
+    border-bottom: 1px solid transparent;
 }
 
 .mega-collection-active::before {
@@ -361,7 +363,7 @@ header {
 }
 
 .mega-collection-link:hover {
-    text-decoration: underline;
+    border-bottom-color: currentColor;
 }
 
 .mega-collection-link i {
@@ -1530,26 +1532,20 @@ header {
 }
 
 .carousel-track {
-    display: flex;
-    justify-content: flex-start;
-    gap: 24px;
+    overflow: hidden;
+}
+
+.carousel-track .swiper-slide {
+    width: 286.5px;
+    height: auto;
 }
 
 .product-card {
     display: flex;
     flex-direction: column;
-    flex: 0 1 286.5px;
+    width: 100%;
     min-width: 0;
     position: relative;
-}
-
-.product-badges {
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    z-index: 2;
-    display: flex;
-    gap: 8px;
 }
 
 .badge {
@@ -1566,16 +1562,6 @@ header {
 .badge-save {
     background-color: #9c3b2e;
     color: #fff;
-}
-
-.badge-tan {
-    background-color: #f2e9d8;
-    color: #1a1a1a;
-}
-
-.badge-gray {
-    background-color: #e5e2da;
-    color: #1a1a1a;
 }
 
 .badge-save-inline {
@@ -1596,26 +1582,6 @@ header {
     height: 100%;
     object-fit: contain;
     display: block;
-}
-
-.product-entries-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #c9dcea;
-    padding: 8px 12px;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-}
-
-.entries-multiplier {
-    font-weight: 700;
-    border-right: 1px solid #1a1a1a;
-    padding-right: 8px;
 }
 
 .product-name {
@@ -2274,8 +2240,8 @@ header {
 
 /* Footer */
 .site-footer {
-    width: 1438px;
-    height: 543px;
+    width: 1440px;
+    height: 557px;
     margin: 0 auto;
     background-color: #e4e3db;
     color: #1f3438;
@@ -2285,18 +2251,18 @@ header {
 .footer-top {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 60px;
     padding-bottom: 70px;
 }
 
 .footer-newsletter {
-    flex: 0 0 358px;
-    height: 262px;
+    flex: 0 0 346px;
+    height: 265px;
 }
 
 .footer-newsletter-title {
     font-family: Georgia, serif;
-    font-size: 32px;
+    font-size: 27px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -2307,6 +2273,7 @@ header {
     font-size: 15px;
     line-height: 1.5;
     color: #3f4f56;
+    width: 300px;
     margin-bottom: 24px;
 }
 
@@ -2342,6 +2309,15 @@ header {
     justify-content: center;
     cursor: pointer;
     flex: 0 0 auto;
+    transition: background-color 0.2s ease;
+}
+
+.footer-newsletter-form button:hover {
+    background-color: #5f6b69;
+}
+
+.footer-newsletter-form button:active {
+    background-color: #1f3438;
 }
 
 .footer-terms-check {
@@ -2364,7 +2340,7 @@ header {
 }
 
 .footer-links-col:first-child {
-    margin-right: -20px;
+    margin-right: -30px;
 }
 
 .footer-links-col {
@@ -2418,13 +2394,13 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 40px;
+    gap: 12px;
 }
 
 .footer-bottom-left {
     display: flex;
     flex-direction: column;
-    width: 1332px;
+    width: 1142.55px;
     height: 72px;
 }
 
@@ -2437,6 +2413,10 @@ header {
     color: #1f3438;
     text-decoration: none;
     margin-bottom: 10px;
+}
+
+.footer-disclaimer:hover {
+    text-decoration: underline;
 }
 
 .footer-bottom-right {

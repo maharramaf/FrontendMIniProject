@@ -142,6 +142,40 @@ subDropdowns.forEach((subDropdown) => {
     text.addEventListener("mouseleave", scheduleClose);
     menu.addEventListener("mouseleave", scheduleClose);
 
+    /* Mega menu category preview swap */
+    const previewImg = menu.querySelector(".mega-preview-img");
+    const previewName = menu.querySelector(".mega-preview-name");
+    const previewDesc = menu.querySelector(".mega-preview-desc");
+    const previewLinks = menu.querySelectorAll(".mega-collection-link[data-preview-img]");
+
+    if (previewImg && previewName && previewDesc && previewLinks.length > 0) {
+
+        const defaultImg = previewImg.getAttribute("src");
+        const defaultName = previewName.textContent;
+        const defaultDesc = previewDesc.textContent;
+
+        function resetPreview() {
+            previewImg.setAttribute("src", defaultImg);
+            previewName.textContent = defaultName;
+            previewDesc.textContent = defaultDesc;
+        }
+
+        previewLinks.forEach((link) => {
+
+            link.addEventListener("mouseenter", () => {
+                previewImg.setAttribute("src", link.dataset.previewImg);
+                previewName.textContent = link.dataset.previewName;
+                previewDesc.textContent = link.dataset.previewDesc;
+            });
+
+            link.addEventListener("mouseleave", resetPreview);
+
+        });
+
+        menu.addEventListener("mouseleave", resetPreview);
+
+    }
+
 });
 
 /* Social proof carousel */
@@ -181,6 +215,24 @@ if (sweepstakesVideo && sweepstakesVideoToggle) {
             icon.className = "fa-solid fa-play";
         }
 
+    });
+
+}
+
+/* Product carousel (Swiper) */
+const productCarouselSection = document.querySelector("#product-carousel");
+
+if (productCarouselSection && window.Swiper) {
+
+    new Swiper(productCarouselSection.querySelector(".carousel-track"), {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 24,
+        a11y: false,
+        navigation: {
+            nextEl: productCarouselSection.querySelector(".carousel-arrow.next"),
+            prevEl: productCarouselSection.querySelector(".carousel-arrow.prev"),
+        },
     });
 
 }
