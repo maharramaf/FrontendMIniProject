@@ -178,21 +178,24 @@ subDropdowns.forEach((subDropdown) => {
 
 });
 
-/* Social proof carousel */
+/* Social proof carousel (Swiper) */
 const socialTrack = document.querySelector(".social-track");
 const socialPrev = document.querySelector(".social-arrows .prev");
 const socialNext = document.querySelector(".social-arrows .next");
 
-if (socialTrack && socialPrev && socialNext) {
+if (socialTrack && socialPrev && socialNext && window.Swiper) {
 
-    const scrollAmount = 254;
-
-    socialNext.addEventListener("click", () => {
-        socialTrack.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    });
-
-    socialPrev.addEventListener("click", () => {
-        socialTrack.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    new Swiper(socialTrack, {
+        slidesPerView: "auto",
+        slidesPerGroup: 1,
+        spaceBetween: 18,
+        speed: 700,
+        a11y: false,
+        loop: true,
+        navigation: {
+            nextEl: socialNext,
+            prevEl: socialPrev,
+        },
     });
 
 }
@@ -219,19 +222,85 @@ if (sweepstakesVideo && sweepstakesVideoToggle) {
 
 }
 
-/* Product carousel (Swiper) */
+/* Product carousel (Swiper) with tabs */
 const productCarouselSection = document.querySelector("#product-carousel");
 
 if (productCarouselSection && window.Swiper) {
 
-    new Swiper(productCarouselSection.querySelector(".carousel-track"), {
+    const tabButtons = productCarouselSection.querySelectorAll(".carousel-tab");
+    const panels = productCarouselSection.querySelectorAll("[data-tab-panel]");
+    const prevBtn = productCarouselSection.querySelector(".carousel-arrow.prev");
+    const nextBtn = productCarouselSection.querySelector(".carousel-arrow.next");
+
+    const swiperConfig = {
         slidesPerView: 4,
         slidesPerGroup: 4,
         spaceBetween: 24,
+        speed: 700,
         a11y: false,
+        loop: true,
+    };
+
+    const swiperInstances = {
+        clean: new Swiper(productCarouselSection.querySelector('[data-tab-panel="clean"]'), swiperConfig),
+    };
+
+    let activeTab = "clean";
+
+    prevBtn.addEventListener("click", () => swiperInstances[activeTab] && swiperInstances[activeTab].slidePrev());
+    nextBtn.addEventListener("click", () => swiperInstances[activeTab] && swiperInstances[activeTab].slideNext());
+
+    tabButtons.forEach((tab) => {
+
+        tab.addEventListener("click", () => {
+
+            const target = tab.dataset.tab;
+
+            if (target === activeTab) {
+                return;
+            }
+
+            tabButtons.forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            if (swiperInstances[activeTab]) {
+                swiperInstances[activeTab].slideToLoop(0, 0);
+            }
+
+            panels.forEach((panel) => {
+                panel.style.display = panel.dataset.tabPanel === target ? "" : "none";
+            });
+
+            if (!swiperInstances[target]) {
+                swiperInstances[target] = new Swiper(productCarouselSection.querySelector(`[data-tab-panel="${target}"]`), swiperConfig);
+            } else {
+                swiperInstances[target].update();
+                swiperInstances[target].slideToLoop(0, 0);
+            }
+
+            activeTab = target;
+
+        });
+
+    });
+
+}
+
+/* Category circles carousel (Swiper) */
+const categoryCirclesSection = document.querySelector("#category-circles");
+
+if (categoryCirclesSection && window.Swiper) {
+
+    new Swiper(categoryCirclesSection.querySelector(".category-track"), {
+        slidesPerView: "auto",
+        slidesPerGroup: 1,
+        spaceBetween: 32,
+        speed: 700,
+        a11y: false,
+        loop: true,
         navigation: {
-            nextEl: productCarouselSection.querySelector(".carousel-arrow.next"),
-            prevEl: productCarouselSection.querySelector(".carousel-arrow.prev"),
+            nextEl: categoryCirclesSection.querySelector(".carousel-arrow.next"),
+            prevEl: categoryCirclesSection.querySelector(".carousel-arrow.prev"),
         },
     });
 

@@ -542,8 +542,8 @@
         <section id="product-carousel">
             <div class="carousel-head">
                 <div class="carousel-tabs">
-                    <button type="button" class="carousel-tab active">Shop Clean, Win Big</button>
-                    <button type="button" class="carousel-tab">New Arrivals</button>
+                    <button type="button" class="carousel-tab active" data-tab="clean">Shop Clean, Win Big</button>
+                    <button type="button" class="carousel-tab" data-tab="new">New Arrivals</button>
                 </div>
                 <div class="carousel-arrows">
                     <button type="button" class="carousel-arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
@@ -551,13 +551,14 @@
                 </div>
             </div>
 
-            <div class="carousel-track swiper">
+            <div class="carousel-track swiper" data-tab-panel="clean">
               <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/cookware-set-card.png" alt="Cookware Set">
+                        <img class="product-image-default" src="./assets/images/cookware-set-card.png" alt="Cookware Set">
+                        <img class="product-image-hover" src="./assets/images/cookware-set-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Cookware Set</h3>
                     <p class="product-rating">★★★★★ <span>(4.8)</span></p>
@@ -583,7 +584,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/fry-pan-duo.png" alt="Fry Pan Duo">
+                        <img class="product-image-default" src="./assets/images/fry-pan-duo.png" alt="Fry Pan Duo">
+                        <img class="product-image-hover" src="./assets/images/fry-pan-duo-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Fry Pan Duo</h3>
                     <p class="product-rating">★★★★★ <span>(4.8)</span></p>
@@ -608,7 +610,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/baking-sheet-trio-card.png" alt="Baking Sheet Trio">
+                        <img class="product-image-default" src="./assets/images/baking-sheet-trio-card.png" alt="Baking Sheet Trio">
+                        <img class="product-image-hover" src="./assets/images/baking-sheet-trio-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Baking Sheet Trio</h3>
                     <p class="product-rating">★★★★★ <span>(4.8)</span></p>
@@ -631,7 +634,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/food-storage-card.png" alt="Food Storage Set">
+                        <img class="product-image-default" src="./assets/images/food-storage-card.png" alt="Food Storage Set">
+                        <img class="product-image-hover" src="./assets/images/food-storage-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Food Storage Set</h3>
                     <p class="product-rating">★★★★★ <span>(4.7)</span></p>
@@ -657,7 +661,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/clean-start-bundle-card.png" alt="Clean Start Bundle">
+                        <img class="product-image-default" src="./assets/images/clean-start-bundle-card.png" alt="Clean Start Bundle">
+                        <img class="product-image-hover" src="./assets/images/clean-start-bundle-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Clean Start Bundle</h3>
                     <p class="product-rating">★★★★★ <span>(4.7)</span></p>
@@ -682,7 +687,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/cookware-plus-set-card.png" alt="Cookware+ Set">
+                        <img class="product-image-default" src="./assets/images/cookware-plus-set-card.png" alt="Cookware+ Set">
+                        <img class="product-image-hover" src="./assets/images/cookware-plus-set-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Cookware+ Set</h3>
                     <p class="product-rating">★★★★★ <span>(4.8)</span></p>
@@ -708,7 +714,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/glass-airtight-container-set-card.png" alt="Glass Airtight Container Set">
+                        <img class="product-image-default" src="./assets/images/glass-airtight-container-set-card.png" alt="Glass Airtight Container Set">
+                        <img class="product-image-hover" src="./assets/images/glass-airtight-container-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Glass Airtight Container Set</h3>
                     <p class="product-rating">★★★★★ <span>(4.8)</span></p>
@@ -734,7 +741,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/cutting-board-set-card.png" alt="Cutting Board Set">
+                        <img class="product-image-default" src="./assets/images/cutting-board-set-card.png" alt="Cutting Board Set">
+                        <img class="product-image-hover" src="./assets/images/cutting-board-set-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Cutting Board Set</h3>
                     <p class="product-rating">★★★★★ <span>(4.7)</span></p>
@@ -752,6 +760,481 @@
                 </div>
                 </div>
 
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img class="product-image-default" src="./assets/images/utensil-set-card.png" alt="Utensil Set">
+                        <img class="product-image-hover" src="./assets/images/utensil-set-hover.png" alt="">
+                    </div>
+                    <h3 class="product-name">Utensil Set</h3>
+                    <p class="product-rating">★★★★★ <span>(4.7)</span></p>
+                    <p class="product-price">
+                        <span class="price-now">$145</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-active" style="background:#e8d3a0"></span>
+                    </div>
+                    <p class="product-desc">5 FSC-certified birch wood utensils for everyday cooking</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img class="product-image-default" src="./assets/images/mixing-bowl-set-card.png" alt="Mixing Bowl Set">
+                        <img class="product-image-hover" src="./assets/images/mixing-bowl-set-hover.png" alt="">
+                    </div>
+                    <h3 class="product-name">Mixing Bowl Set</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-now">$195</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-active" style="background:#7e9172"></span>
+                        <span class="swatch" style="background:#efe8da"></span>
+                        <span class="swatch" style="background:#2c3e50"></span>
+                        <span class="swatch" style="background:#c9c9c9"></span>
+                        <span class="swatch" style="background:#d97f63"></span>
+                        <span class="swatch" style="background:#e6a52e"></span>
+                    </div>
+                    <p class="product-desc">6-pc set of stainless steel mixing bowls and glass lids for clean prep</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img class="product-image-default" src="./assets/images/bakeware-set-card.png" alt="Bakeware Set">
+                        <img class="product-image-hover" src="./assets/images/bakeware-set-hover.png" alt="">
+                    </div>
+                    <h3 class="product-name">Bakeware Set</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-was">$605</span>
+                        <span class="price-now">$445</span>
+                        <span class="price-percent">(26% off)</span>
+                        <span class="badge badge-save badge-save-inline">SAVE $160</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-active" style="background:#2c3e50"></span>
+                        <span class="swatch" style="background:#efe8da"></span>
+                        <span class="swatch" style="background:#1c1c1c"></span>
+                        <span class="swatch" style="background:#c9c9c9"></span>
+                        <span class="swatch" style="background:#d97f63"></span>
+                        <span class="swatch" style="background:#7e9172"></span>
+                    </div>
+                    <p class="product-desc">11-pc ceramic bakeware set for non-toxic baking</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img class="product-image-default" src="./assets/images/knife-utensil-set-card.png" alt="Knife & Utensil Set">
+                        <img class="product-image-hover" src="./assets/images/knife-utensil-set-hover.png" alt="">
+                    </div>
+                    <h3 class="product-name">Knife & Utensil Set</h3>
+                    <p class="product-rating">★★★★★ <span>(4.7)</span></p>
+                    <p class="product-price">
+                        <span class="price-was">$645</span>
+                        <span class="price-now">$395</span>
+                        <span class="price-percent">(39% off)</span>
+                        <span class="badge badge-save badge-save-inline">SAVE $250</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-active" style="background:#d97f63"></span>
+                        <span class="swatch" style="background:#efe8da"></span>
+                        <span class="swatch" style="background:#1c1c1c"></span>
+                        <span class="swatch" style="background:#c9c9c9"></span>
+                        <span class="swatch" style="background:#a9c4c9"></span>
+                        <span class="swatch" style="background:#1c1c1c"></span>
+                    </div>
+                    <p class="product-desc">14-pc set for clean prepping, cooking, and serving</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="carousel-track swiper" data-tab-panel="new" style="display:none;">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img class="product-image-default" src="./assets/images/new-arrival-1.png" alt="Clean Start Bundle">
+                        <img class="product-image-hover" src="./assets/images/clean-start-bundle-new-hover.png" alt="">
+                    </div>
+                    <h3 class="product-name">Clean Start Bundle</h3>
+                    <p class="product-rating">★★★★★ <span>(4.7)</span></p>
+                    <p class="product-price">
+                        <span class="price-was">$1,900</span>
+                        <span class="price-now">$1,195</span>
+                        <span class="price-percent">(37% off)</span>
+                        <span class="badge badge-save badge-save-inline">SAVE $705</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#d97f63"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#7e9172"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#c9c9c9"></span>
+                    </div>
+                    <p class="product-desc">40-pc set for clean prepping, cooking & storing</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img class="product-image-default" src="./assets/images/new-arrival-2.png" alt="Full Ceramic Cookware Bundle">
+                        <img class="product-image-hover" src="./assets/images/full-ceramic-cookware-bundle-hover.png" alt="">
+                    </div>
+                    <h3 class="product-name">Full Ceramic Cookware Bundle</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-was">$2,470</span>
+                        <span class="price-now">$1,495</span>
+                        <span class="price-percent">(39% off)</span>
+                        <span class="badge badge-save badge-save-inline">SAVE $975</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#7e9172"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#c9c9c9"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#d97f63"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#e6a52e"></span>
+                    </div>
+                    <p class="product-desc">21-pc complete ceramic cookware set for every meal</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-3.png" alt="Fry Pan Trio">
+                    </div>
+                    <h3 class="product-name">Fry Pan Trio</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-was">$375</span>
+                        <span class="price-now">$325</span>
+                        <span class="price-percent">(13% off)</span>
+                        <span class="badge badge-save badge-save-inline">SAVE $50</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#c9c9c9"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#d97f63"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#e6a52e"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#7e9172"></span>
+                    </div>
+                    <p class="product-desc">3 ceramic fry pans for everyday non-stick cooking</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img class="product-image-default" src="./assets/images/new-arrival-4.png" alt="Fry Pan Trio with Glass Lids">
+                        <img class="product-image-hover" src="./assets/images/fry-pan-trio-glass-lids-hover.png" alt="">
+                    </div>
+                    <h3 class="product-name">Fry Pan Trio with Glass Lids</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-was">$560</span>
+                        <span class="price-now">$395</span>
+                        <span class="price-percent">(29% off)</span>
+                        <span class="badge badge-save badge-save-inline">SAVE $165</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#c9c9c9"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#d97f63"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#e6a52e"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#7e9172"></span>
+                    </div>
+                    <p class="product-desc">3 ceramic fry pans with glass lids for versatile cooking</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-5.png" alt="7pc Fry & Sauté Set">
+                    </div>
+                    <h3 class="product-name">7pc Fry & Sauté Set</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-was">$695</span>
+                        <span class="price-now">$595</span>
+                        <span class="price-percent">(14% off)</span>
+                        <span class="badge badge-save badge-save-inline">SAVE $100</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#d97f63"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#c9c9c9"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#7e9172"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#e6a52e"></span>
+                    </div>
+                    <p class="product-desc">7-piece set of non-stick pans for everyday versatility</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-6.png" alt="Summer Kitchen Starter Set">
+                    </div>
+                    <h3 class="product-name">Summer Kitchen Starter Set</h3>
+                    <p class="product-rating">★★★★★ <span>(4.7)</span></p>
+                    <p class="product-price">
+                        <span class="price-was">$1,255</span>
+                        <span class="price-now">$820</span>
+                        <span class="price-percent">(35% off)</span>
+                        <span class="badge badge-save badge-save-inline">SAVE $435</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#d97f63"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#c9c9c9"></span>
+                    </div>
+                    <p class="product-desc">31-pc set of clean kitchenware & organic linens for summer cooking</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-7.png" alt="Trash & Recycling Duo (Rectangular)">
+                    </div>
+                    <h3 class="product-name">Trash & Recycling Duo (Rectangular)</h3>
+                    <p class="product-rating">★★★★★ <span>(4.9)</span></p>
+                    <p class="product-price">
+                        <span class="price-was">$490</span>
+                        <span class="price-now">$445</span>
+                        <span class="badge badge-save badge-save-inline">SAVE $45</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#e8d3a0"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#3f5142"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#9c5a3c"></span>
+                    </div>
+                    <p class="product-desc">A complete system for wide-profile sorting & disposal</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-8.png" alt="Trash & Recycling Duo (Slim)">
+                    </div>
+                    <h3 class="product-name">Trash & Recycling Duo (Slim)</h3>
+                    <p class="product-rating">★★★★★ <span>(4.9)</span></p>
+                    <p class="product-price">
+                        <span class="price-was">$490</span>
+                        <span class="price-now">$445</span>
+                        <span class="badge badge-save badge-save-inline">SAVE $45</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#e8d3a0"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#3f5142"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#9c5a3c"></span>
+                    </div>
+                    <p class="product-desc">A complete system for narrow-profile sorting & disposal</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-9.png" alt="Mixing Bowl Set">
+                    </div>
+                    <h3 class="product-name">Mixing Bowl Set</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-now">$195</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#7e9172"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#c9c9c9"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#d97f63"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#e6a52e"></span>
+                    </div>
+                    <p class="product-desc">6-pc set of stainless steel mixing bowls and glass lids for clean prep</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-10.png" alt="Bakeware Set">
+                    </div>
+                    <h3 class="product-name">Bakeware Set</h3>
+                    <p class="product-rating">★★★★★ <span>(4.7)</span></p>
+                    <p class="product-price">
+                        <span class="price-now">$275</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#c9c9c9"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                    </div>
+                    <p class="product-desc">5-pc ceramic bakeware set for every baking need</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-11.png" alt="Trash & Recycling Bin">
+                    </div>
+                    <h3 class="product-name">Trash & Recycling Bin</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-now">$245</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#e8d3a0"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#3f5142"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#9c5a3c"></span>
+                    </div>
+                    <p class="product-desc">A complete system for wide-profile sorting & disposal</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-12.png" alt="Trash & Recycling Bin">
+                    </div>
+                    <h3 class="product-name">Trash & Recycling Bin</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-now">$245</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#3f5142"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#e8d3a0"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#9c5a3c"></span>
+                    </div>
+                    <p class="product-desc">A complete system for narrow-profile sorting & disposal</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-13.png" alt="Trash & Recycling Bin">
+                    </div>
+                    <h3 class="product-name">Trash & Recycling Bin</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-now">$245</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#9c5a3c"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#e8d3a0"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#3f5142"></span>
+                    </div>
+                    <p class="product-desc">Compact 2-tier trash & recycling bin for tight spaces</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-14.png" alt="Kitchen Prep Bundle">
+                    </div>
+                    <h3 class="product-name">Kitchen Prep Bundle</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-now">$795</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#c9c9c9"></span>
+                    </div>
+                    <p class="product-desc">17-pc prep essentials with mixing bowls, knives & cutting boards</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-15.png" alt="Bake & Store Bundle">
+                    </div>
+                    <h3 class="product-name">Bake & Store Bundle</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-now">$765</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#efe8da"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#c9c9c9"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                    </div>
+                    <p class="product-desc">15-pc bake & store bundle with bowls, containers & bakeware</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
+                <div class="swiper-slide">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./assets/images/new-arrival-16.png" alt="Complete Bakeware Set">
+                    </div>
+                    <h3 class="product-name">Complete Bakeware Set</h3>
+                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <p class="product-price">
+                        <span class="price-now">$795</span>
+                    </p>
+                    <div class="product-swatches">
+                        <span class="swatch swatch-glossy swatch-active" style="background-color:#d97f63"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#c9c9c9"></span>
+                        <span class="swatch swatch-glossy" style="background-color:#2c3e50"></span>
+                    </div>
+                    <p class="product-desc">17-pc complete bakeware set for every occasion</p>
+                    <a href="#" class="quick-shop">Quick Shop →</a>
+                </div>
+                </div>
+
               </div>
             </div>
         </section>
@@ -764,31 +1247,45 @@
                     <button type="button" class="carousel-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </div>
-            <div class="category-track">
+            <div class="category-track swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                 <a href="#" class="category-item">
                     <span class="category-circle"><img src="./assets/images/category-cookware.png" alt=""></span>
                     <span class="category-label">Shop Cookware →</span>
                 </a>
+                </div>
+                <div class="swiper-slide">
                 <a href="#" class="category-item">
                     <span class="category-circle"><img src="./assets/images/category-bakeware.png" alt=""></span>
                     <span class="category-label">Shop Bakeware →</span>
                 </a>
+                </div>
+                <div class="swiper-slide">
                 <a href="#" class="category-item">
                     <span class="category-circle"><img src="./assets/images/category-food-storage.png" alt=""></span>
                     <span class="category-label">Shop Food Storage →</span>
                 </a>
+                </div>
+                <div class="swiper-slide">
                 <a href="#" class="category-item">
                     <span class="category-circle"><img src="./assets/images/category-trash.png" alt=""></span>
                     <span class="category-label">Shop Trash &amp; Recycling →</span>
                 </a>
+                </div>
+                <div class="swiper-slide">
                 <a href="#" class="category-item">
                     <span class="category-circle"><img src="./assets/images/category-kitchen-tools.png" alt=""></span>
                     <span class="category-label">Shop Kitchen Tools →</span>
                 </a>
+                </div>
+                <div class="swiper-slide">
                 <a href="#" class="category-item">
                     <span class="category-circle"><img src="./assets/images/category-accessories.png" alt=""></span>
                     <span class="category-label">Shop Accessories →</span>
                 </a>
+                </div>
+              </div>
             </div>
         </section>
 
@@ -824,36 +1321,46 @@
                 </div>
             </div>
 
-            <div class="social-track">
+            <div class="social-track swiper">
+                <div class="swiper-wrapper">
 
-                <div class="social-item">
-                    <div class="social-card">
-                        <img src="./assets/images/social-1.png" alt="">
+                    <div class="swiper-slide">
+                        <div class="social-item">
+                            <div class="social-card">
+                                <img src="./assets/images/social-1.png" alt="">
+                            </div>
+                            <a href="#" class="social-caption">Shop All →</a>
+                        </div>
                     </div>
-                    <a href="#" class="social-caption">Shop All →</a>
-                </div>
 
-                <div class="social-item">
-                    <div class="social-card">
-                        <img src="./assets/images/social-2.png" alt="">
+                    <div class="swiper-slide">
+                        <div class="social-item">
+                            <div class="social-card">
+                                <img src="./assets/images/social-2.png" alt="">
+                            </div>
+                            <a href="#" class="social-caption">Learn More →</a>
+                        </div>
                     </div>
-                    <a href="#" class="social-caption">Learn More →</a>
-                </div>
 
-                <div class="social-item">
-                    <div class="social-card">
-                        <img src="./assets/images/social-3.png" alt="">
+                    <div class="swiper-slide">
+                        <div class="social-item">
+                            <div class="social-card">
+                                <img src="./assets/images/social-3.png" alt="">
+                            </div>
+                            <a href="#" class="social-caption">Shop Cutting Boards →</a>
+                        </div>
                     </div>
-                    <a href="#" class="social-caption">Shop Cutting Boards →</a>
-                </div>
 
-                <div class="social-item">
-                    <div class="social-card">
-                        <img src="./assets/images/social-4.png" alt="">
+                    <div class="swiper-slide">
+                        <div class="social-item">
+                            <div class="social-card">
+                                <img src="./assets/images/social-4.png" alt="">
+                            </div>
+                            <a href="#" class="social-caption">Shop Kitchen Tools →</a>
+                        </div>
                     </div>
-                    <a href="#" class="social-caption">Shop Kitchen Tools →</a>
-                </div>
 
+                </div>
             </div>
         </section>
 
