@@ -32,6 +32,32 @@ if (promoSlides.length > 0) {
 
 }
 
+/* Mobile hamburger nav */
+const hamburgerBtn = document.querySelector(".hamburger-btn");
+const mobileNavDrawer = document.querySelector(".mobile-nav-drawer");
+const mobileNavOverlay = document.querySelector(".mobile-nav-overlay");
+const mobileNavClose = document.querySelector(".mobile-nav-close");
+
+function openMobileNav() {
+    mobileNavDrawer.classList.add("open");
+    mobileNavOverlay.classList.add("open");
+    document.documentElement.classList.add("no-scroll");
+    document.body.classList.add("no-scroll");
+}
+
+function closeMobileNav() {
+    mobileNavDrawer.classList.remove("open");
+    mobileNavOverlay.classList.remove("open");
+    document.documentElement.classList.remove("no-scroll");
+    document.body.classList.remove("no-scroll");
+}
+
+if (hamburgerBtn && mobileNavDrawer && mobileNavOverlay && mobileNavClose) {
+    hamburgerBtn.addEventListener("click", openMobileNav);
+    mobileNavClose.addEventListener("click", closeMobileNav);
+    mobileNavOverlay.addEventListener("click", closeMobileNav);
+}
+
 /* Dropdown */
 const dropdown = document.querySelector(".dropdown");
 const aboutText = document.querySelector(".about-text");
@@ -233,12 +259,29 @@ if (productCarouselSection && window.Swiper) {
     const nextBtn = productCarouselSection.querySelector(".carousel-arrow.next");
 
     const swiperConfig = {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        spaceBetween: 24,
+        slidesPerView: 1.15,
+        slidesPerGroup: 1,
+        spaceBetween: 14,
         speed: 700,
         a11y: false,
         loop: true,
+        breakpoints: {
+            481: {
+                slidesPerView: 2.15,
+                slidesPerGroup: 2,
+                spaceBetween: 18,
+            },
+            769: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 20,
+            },
+            1025: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                spaceBetween: 24,
+            },
+        },
     };
 
     const swiperInstances = {

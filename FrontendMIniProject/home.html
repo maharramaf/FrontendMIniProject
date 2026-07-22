@@ -34,6 +34,12 @@
 
         <div class="header-main">
 
+            <button type="button" class="hamburger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <nav class="nav-left">
                 <ul>
                     <li class="dropdown">
@@ -487,6 +493,29 @@
                 </div>
             </div>
         </nav>
+
+        <div class="mobile-nav-overlay"></div>
+        <div class="mobile-nav-drawer">
+            <div class="mobile-nav-top">
+                <img src="./assets/images/logo.png" alt="Caraway" class="mobile-nav-logo">
+                <button type="button" class="mobile-nav-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <nav class="mobile-nav-links">
+                <a href="#">Shop All</a>
+                <a href="#">$100k Sweeps ✨</a>
+                <a href="#">Cookware</a>
+                <a href="#">Bakeware</a>
+                <a href="#">Storage &amp; Organization</a>
+                <a href="#">Kitchen Tools</a>
+                <a href="#">Accessories</a>
+                <a href="#" class="mobile-nav-highlight">Exclusive Savings</a>
+                <div class="mobile-nav-divider"></div>
+                <a href="#">About</a>
+                <a href="#">Reviews</a>
+                <a href="#">Quiz</a>
+                <a href="#">Join Our Fight</a>
+            </nav>
+        </div>
 
     </header>
 
@@ -972,7 +1001,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-5.png" alt="7pc Fry & Sauté Set">
+                        <img class="product-image-default" src="./assets/images/new-arrival-5.png" alt="7pc Fry & Sauté Set">
+                        <img class="product-image-hover" src="./assets/images/fry-saute-set-hover.png" alt="">
                     </div>
                     <h3 class="product-name">7pc Fry & Sauté Set</h3>
                     <p class="product-rating">★★★★★ <span>(4.8)</span></p>
@@ -998,7 +1028,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-6.png" alt="Summer Kitchen Starter Set">
+                        <img class="product-image-default" src="./assets/images/new-arrival-6.png" alt="Summer Kitchen Starter Set">
+                        <img class="product-image-hover" src="./assets/images/summer-kitchen-starter-set-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Summer Kitchen Starter Set</h3>
                     <p class="product-rating">★★★★★ <span>(4.7)</span></p>
@@ -1021,7 +1052,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-7.png" alt="Trash & Recycling Duo (Rectangular)">
+                        <img class="product-image-default" src="./assets/images/new-arrival-7.png" alt="Trash & Recycling Duo (Rectangular)">
+                        <img class="product-image-hover" src="./assets/images/trash-duo-rect-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Trash & Recycling Duo (Rectangular)</h3>
                     <p class="product-rating">★★★★★ <span>(4.9)</span></p>
@@ -1045,7 +1077,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-8.png" alt="Trash & Recycling Duo (Slim)">
+                        <img class="product-image-default" src="./assets/images/new-arrival-8.png" alt="Trash & Recycling Duo (Slim)">
+                        <img class="product-image-hover" src="./assets/images/trash-duo-slim-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Trash & Recycling Duo (Slim)</h3>
                     <p class="product-rating">★★★★★ <span>(4.9)</span></p>
@@ -1069,7 +1102,8 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-9.png" alt="Mixing Bowl Set">
+                        <img class="product-image-default" src="./assets/images/new-arrival-9.png" alt="Mixing Bowl Set">
+                        <img class="product-image-hover" src="./assets/images/mixing-bowl-set-new-hover.png" alt="">
                     </div>
                     <h3 class="product-name">Mixing Bowl Set</h3>
                     <p class="product-rating">★★★★★ <span>(4.8)</span></p>
@@ -1092,10 +1126,11 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-10.png" alt="Bakeware Set">
+                        <img class="product-image-default" src="./assets/images/new-arrival-10.png" alt="Bakeware+ Set">
+                        <img class="product-image-hover" src="./assets/images/bakeware-plus-set-hover.png" alt="">
                     </div>
-                    <h3 class="product-name">Bakeware Set</h3>
-                    <p class="product-rating">★★★★★ <span>(4.7)</span></p>
+                    <h3 class="product-name">Bakeware+ Set</h3>
+                    <p class="product-rating">★★★★★ <span>(4.9)</span></p>
                     <p class="product-price">
                         <span class="price-now">$275</span>
                     </p>
@@ -1112,10 +1147,11 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-11.png" alt="Trash & Recycling Bin">
+                        <img class="product-image-default" src="./assets/images/new-arrival-11.png" alt="45L Rectangular Step Trash Can">
+                        <img class="product-image-hover" src="./assets/images/45l-rect-trash-can-hover.png" alt="">
                     </div>
-                    <h3 class="product-name">Trash & Recycling Bin</h3>
-                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <h3 class="product-name">45L Rectangular Step Trash Can</h3>
+                    <p class="product-rating">★★★★★ <span>(5)</span></p>
                     <p class="product-price">
                         <span class="price-now">$245</span>
                     </p>
@@ -1134,10 +1170,11 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-12.png" alt="Trash & Recycling Bin">
+                        <img class="product-image-default" src="./assets/images/new-arrival-12.png" alt="45L Slim Step Trash Can">
+                        <img class="product-image-hover" src="./assets/images/45l-slim-trash-can-hover.png" alt="">
                     </div>
-                    <h3 class="product-name">Trash & Recycling Bin</h3>
-                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <h3 class="product-name">45L Slim Step Trash Can</h3>
+                    <p class="product-rating">★★★★★ <span>(5)</span></p>
                     <p class="product-price">
                         <span class="price-now">$245</span>
                     </p>
@@ -1156,10 +1193,11 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-13.png" alt="Trash & Recycling Bin">
+                        <img class="product-image-default" src="./assets/images/new-arrival-13.png" alt="45L 2-Drawer Recycling Bin">
+                        <img class="product-image-hover" src="./assets/images/2drawer-recycling-bin-hover.png" alt="">
                     </div>
-                    <h3 class="product-name">Trash & Recycling Bin</h3>
-                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <h3 class="product-name">45L 2-Drawer Recycling Bin</h3>
+                    <p class="product-rating">★★★★★ <span>(4.9)</span></p>
                     <p class="product-price">
                         <span class="price-now">$245</span>
                     </p>
@@ -1178,10 +1216,11 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-14.png" alt="Kitchen Prep Bundle">
+                        <img class="product-image-default" src="./assets/images/new-arrival-14.png" alt="Complete Kitchen Prep Set">
+                        <img class="product-image-hover" src="./assets/images/complete-kitchen-prep-set-hover.png" alt="">
                     </div>
-                    <h3 class="product-name">Kitchen Prep Bundle</h3>
-                    <p class="product-rating">★★★★★ <span>(4.8)</span></p>
+                    <h3 class="product-name">Complete Kitchen Prep Set</h3>
+                    <p class="product-rating">★★★★★ <span>(4.7)</span></p>
                     <p class="product-price">
                         <span class="price-now">$795</span>
                     </p>
@@ -1198,9 +1237,10 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-15.png" alt="Bake & Store Bundle">
+                        <img class="product-image-default" src="./assets/images/new-arrival-15.png" alt="Better Baking Bundle">
+                        <img class="product-image-hover" src="./assets/images/better-baking-bundle-hover.png" alt="">
                     </div>
-                    <h3 class="product-name">Bake & Store Bundle</h3>
+                    <h3 class="product-name">Better Baking Bundle</h3>
                     <p class="product-rating">★★★★★ <span>(4.8)</span></p>
                     <p class="product-price">
                         <span class="price-now">$765</span>
@@ -1218,12 +1258,16 @@
                 <div class="swiper-slide">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./assets/images/new-arrival-16.png" alt="Complete Bakeware Set">
+                        <img class="product-image-default" src="./assets/images/new-arrival-16.png" alt="Full Ceramic Bakeware Set">
+                        <img class="product-image-hover" src="./assets/images/full-ceramic-bakeware-set-hover.png" alt="">
                     </div>
-                    <h3 class="product-name">Complete Bakeware Set</h3>
+                    <h3 class="product-name">Full Ceramic Bakeware Set</h3>
                     <p class="product-rating">★★★★★ <span>(4.8)</span></p>
                     <p class="product-price">
+                        <span class="price-was">$1,145</span>
                         <span class="price-now">$795</span>
+                        <span class="price-percent">(31% off)</span>
+                        <span class="badge badge-save badge-save-inline">SAVE $350</span>
                     </p>
                     <div class="product-swatches">
                         <span class="swatch swatch-glossy swatch-active" style="background-color:#d97f63"></span>
@@ -1251,37 +1295,37 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                 <a href="#" class="category-item">
-                    <span class="category-circle"><img src="./assets/images/category-cookware.png" alt=""></span>
+                    <span class="category-circle"><img src="./assets/images/category-cookware.png" alt=""><img class="category-circle-hover" src="./assets/images/category-cookware-hover.png" alt=""></span>
                     <span class="category-label">Shop Cookware →</span>
                 </a>
                 </div>
                 <div class="swiper-slide">
                 <a href="#" class="category-item">
-                    <span class="category-circle"><img src="./assets/images/category-bakeware.png" alt=""></span>
+                    <span class="category-circle"><img src="./assets/images/category-bakeware.png" alt=""><img class="category-circle-hover" src="./assets/images/category-bakeware-hover.png" alt=""></span>
                     <span class="category-label">Shop Bakeware →</span>
                 </a>
                 </div>
                 <div class="swiper-slide">
                 <a href="#" class="category-item">
-                    <span class="category-circle"><img src="./assets/images/category-food-storage.png" alt=""></span>
+                    <span class="category-circle"><img src="./assets/images/category-food-storage.png" alt=""><img class="category-circle-hover" src="./assets/images/category-food-storage-hover.png" alt=""></span>
                     <span class="category-label">Shop Food Storage →</span>
                 </a>
                 </div>
                 <div class="swiper-slide">
                 <a href="#" class="category-item">
-                    <span class="category-circle"><img src="./assets/images/category-trash.png" alt=""></span>
+                    <span class="category-circle"><img src="./assets/images/category-trash.png" alt=""><img class="category-circle-hover" src="./assets/images/category-trash-hover.png" alt=""></span>
                     <span class="category-label">Shop Trash &amp; Recycling →</span>
                 </a>
                 </div>
                 <div class="swiper-slide">
                 <a href="#" class="category-item">
-                    <span class="category-circle"><img src="./assets/images/category-kitchen-tools.png" alt=""></span>
+                    <span class="category-circle"><img src="./assets/images/category-kitchen-tools.png" alt=""><img class="category-circle-hover" src="./assets/images/category-kitchen-tools-hover.png" alt=""></span>
                     <span class="category-label">Shop Kitchen Tools →</span>
                 </a>
                 </div>
                 <div class="swiper-slide">
                 <a href="#" class="category-item">
-                    <span class="category-circle"><img src="./assets/images/category-accessories.png" alt=""></span>
+                    <span class="category-circle"><img src="./assets/images/category-accessories.png" alt=""><img class="category-circle-hover" src="./assets/images/category-accessories-hover.png" alt=""></span>
                     <span class="category-label">Shop Accessories →</span>
                 </a>
                 </div>

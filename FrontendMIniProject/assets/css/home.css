@@ -1288,7 +1288,8 @@ header {
     gap: 60px;
     background-color: #9c5a3c;
     color: #fff;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 230px;
     padding: 0 80px;
     margin: 0 auto;
@@ -1346,7 +1347,8 @@ header {
 /* How to Enter */
 #how-to-enter {
     background-color: #f7f0e1;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 480px;
     padding: 70px 80px;
     margin: 0 auto;
@@ -1713,7 +1715,8 @@ header {
 
 /* Category circles */
 #category-circles {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 424.3px;
     margin: 0 auto;
     padding: 48px 0 0;
@@ -1759,6 +1762,7 @@ header {
 }
 
 .category-circle {
+    position: relative;
     width: 220px;
     height: 220px;
     border-radius: 50%;
@@ -1773,6 +1777,18 @@ header {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.category-circle-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-item:hover .category-circle-hover {
+    opacity: 1;
 }
 
 .category-label {
@@ -1795,7 +1811,8 @@ header {
 #marquee-banner {
     background-color: #5c6b45;
     overflow: hidden;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 80px;
     margin: 0 auto;
     display: flex;
@@ -1854,7 +1871,8 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 600px;
     object-fit: cover;
     z-index: 0;
@@ -2083,7 +2101,8 @@ header {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -2096,6 +2115,7 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: left center;
     display: block;
 }
 
@@ -2140,6 +2160,7 @@ header {
     color: #1a1a1a;
     text-decoration: underline;
     text-underline-offset: 3px;
+    white-space: nowrap;
 }
 
 .transparency-intro {
@@ -2203,7 +2224,8 @@ header {
 
 /* Perks bar */
 #perks-bar {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 140px;
     background-color: #e4e3db;
     padding: 40px 80px;
@@ -2243,7 +2265,8 @@ header {
 /* Sweepstakes video (after perks bar) */
 #sweepstakes-video {
     position: relative;
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 587.2px;
     margin: 0 auto;
     overflow: hidden;
@@ -2275,7 +2298,8 @@ header {
 
 /* Footer */
 .site-footer {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 557px;
     margin: 0 auto;
     background-color: #e4e3db;
@@ -2496,3 +2520,640 @@ header {
     color: #3f4f56;
 }
 
+/* Hamburger button (mobile only) */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #1a1a1a;
+}
+
+/* Mobile nav drawer */
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1500;
+}
+
+.mobile-nav-overlay.open {
+    display: block;
+}
+
+.mobile-nav-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    max-width: 85vw;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1501;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.mobile-nav-drawer.open {
+    transform: translateX(0);
+}
+
+.mobile-nav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #eeeeea;
+}
+
+.mobile-nav-logo {
+    width: 120px;
+    height: auto;
+    display: block;
+}
+
+.mobile-nav-close {
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 40px;
+}
+
+.mobile-nav-links a {
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f0ea;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.mobile-nav-highlight {
+    color: #b5442e;
+}
+
+.mobile-nav-divider {
+    height: 1px;
+    background-color: #eeeeea;
+    margin: 10px 0;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE — Tablet (<=1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+
+    .sub-nav {
+        gap: 20px;
+        padding: 14px 24px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sub-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mega-menu-inner {
+        max-width: 92%;
+    }
+
+    #sweepstakes-hero {
+        height: auto;
+    }
+
+    .sweepstakes-hero-left {
+        padding: 50px 40px;
+    }
+
+    .sweepstakes-title {
+        font-size: 36px;
+    }
+
+    #win-prizes {
+        height: auto;
+        gap: 30px;
+        padding: 40px;
+        flex-wrap: wrap;
+    }
+
+    #how-to-enter {
+        height: auto;
+        padding: 50px 40px;
+    }
+
+    .how-to-enter-title {
+        width: 100%;
+    }
+
+    .enter-steps {
+        flex-wrap: wrap;
+        gap: 40px;
+        padding-right: 0;
+    }
+
+    .enter-step {
+        flex: 1 1 260px;
+    }
+
+    .enter-step-title,
+    .enter-step-text {
+        width: 100%;
+    }
+
+    .entries-box {
+        flex: 1 1 100%;
+    }
+
+    #product-carousel {
+        padding: 50px 40px;
+    }
+
+    #category-circles {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .category-head,
+    .category-track {
+        width: 100%;
+        padding: 0 24px;
+    }
+
+    #marquee-banner {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #social-proof {
+        width: 100%;
+        height: auto;
+        padding: 40px;
+        flex-wrap: wrap;
+    }
+
+    .social-left {
+        flex: 1 1 100%;
+        width: 100%;
+        height: auto;
+        margin: 0 0 24px;
+    }
+
+    #transparency {
+        width: 100%;
+    }
+
+    .transparency-content {
+        padding: 50px 40px;
+    }
+
+    .transparency-title,
+    .transparency-text,
+    .transparency-list {
+        width: 100%;
+    }
+
+    .transparency-text-1,
+    .transparency-text-2,
+    .transparency-list {
+        height: auto;
+    }
+
+    #perks-bar {
+        width: 100%;
+        height: auto;
+        padding: 30px 40px;
+    }
+
+    .perks-bar-inner {
+        width: 100%;
+        flex-wrap: wrap;
+        height: auto;
+        gap: 24px;
+    }
+
+    #sweepstakes-video {
+        height: auto;
+        aspect-ratio: 1440 / 587.2;
+    }
+
+    .site-footer {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-top {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .footer-newsletter {
+        flex: 1 1 100%;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        row-gap: 32px;
+        flex: 1 1 100%;
+    }
+
+    .footer-bottom-left,
+    .footer-disclaimer {
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE — Mobile (<=768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* Header / nav */
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .nav-left,
+    .nav-right .search-box {
+        display: none;
+    }
+
+    .header-main {
+        padding: 14px 20px;
+    }
+
+    .logo-img {
+        width: 120px;
+        height: auto;
+    }
+
+    .sub-nav {
+        display: none;
+    }
+
+    .search-panel {
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Sweepstakes hero */
+    #sweepstakes-hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sweepstakes-hero-left,
+    .sweepstakes-hero-right {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .sweepstakes-hero-right {
+        height: 320px;
+    }
+
+    .sweepstakes-hero-left {
+        padding: 40px 24px;
+    }
+
+    .sweepstakes-title {
+        font-size: 30px;
+    }
+
+    .sweepstakes-text {
+        max-width: 100%;
+    }
+
+    .sweepstakes-buttons {
+        flex-wrap: wrap;
+    }
+
+    /* Win prizes */
+    #win-prizes {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 24px;
+        gap: 24px;
+    }
+
+    .win-prizes-title {
+        white-space: normal;
+        font-size: 26px;
+    }
+
+    .win-prizes-text {
+        width: 100%;
+    }
+
+    /* How to enter */
+    #how-to-enter {
+        padding: 40px 24px;
+    }
+
+    .how-to-enter-title {
+        white-space: normal;
+        font-size: 26px;
+        height: auto;
+        margin-bottom: 36px;
+    }
+
+    .enter-steps {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    /* Product carousel */
+    #product-carousel {
+        padding: 40px 20px;
+    }
+
+    .carousel-head {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .carousel-tabs {
+        gap: 32px;
+    }
+
+    .carousel-tab {
+        font-size: 19px;
+    }
+
+    .carousel-tab:nth-child(1),
+    .carousel-tab:nth-child(2) {
+        width: auto;
+        height: auto;
+    }
+
+    /* Category circles */
+    #category-circles {
+        padding: 32px 0;
+    }
+
+    .category-head {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 24px;
+        padding: 0 24px;
+    }
+
+    .category-title {
+        position: static;
+        left: auto;
+        transform: none;
+        white-space: normal;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .category-track .swiper-slide {
+        width: 130px;
+    }
+
+    .category-item {
+        width: 130px;
+    }
+
+    .category-circle {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 10px;
+    }
+
+    .category-label {
+        font-size: 13px;
+    }
+
+    /* Marquee */
+    .marquee-item,
+    .marquee-item-bold {
+        width: auto;
+        font-size: 13px;
+    }
+
+    .marquee-item-bold {
+        font-size: 18px;
+    }
+
+    /* Join conversation */
+    #join-conversation {
+        padding: 60px 24px;
+    }
+
+    .join-inner {
+        width: 100%;
+        height: auto;
+    }
+
+    .join-title {
+        font-size: 30px;
+    }
+
+    .join-text {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Social proof */
+    #social-proof {
+        padding: 30px 20px;
+    }
+
+    .social-title {
+        font-size: 26px;
+    }
+
+    /* Transparency */
+    #transparency {
+        flex-direction: column;
+    }
+
+    .transparency-image,
+    .transparency-content {
+        flex: 0 0 auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .transparency-image {
+        height: 280px;
+    }
+
+    .transparency-content {
+        padding: 50px 24px;
+    }
+
+    .transparency-title,
+    .transparency-text,
+    .transparency-list {
+        width: 100%;
+    }
+
+    .transparency-text-1,
+    .transparency-text-2,
+    .transparency-list {
+        height: auto;
+    }
+
+    /* Perks bar */
+    #perks-bar {
+        padding: 24px 20px;
+    }
+
+    .perks-bar-inner {
+        justify-content: center;
+    }
+
+    .perks-bar-item {
+        flex: 1 1 45%;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 40px 24px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer-newsletter {
+        flex: 0 0 auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-newsletter-text {
+        width: 100%;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 32px 24px;
+    }
+
+    .footer-links-col:first-child {
+        margin-right: 0;
+    }
+
+    .footer-links-list {
+        width: 140px;
+        height: auto !important;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-bottom-left {
+        height: auto;
+    }
+
+    .footer-bottom-right {
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE — Small mobile (<=480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+
+    .promo-slide {
+        font-size: 13px;
+        padding: 0 12px;
+        text-align: center;
+    }
+
+    .sweepstakes-title {
+        font-size: 24px;
+    }
+
+    .win-prizes-title {
+        font-size: 22px;
+    }
+
+    .how-to-enter-title {
+        font-size: 22px;
+    }
+
+    .carousel-tabs {
+        gap: 20px;
+    }
+
+    .carousel-tab {
+        font-size: 16px;
+    }
+
+    .category-track .swiper-slide,
+    .category-item {
+        width: 105px;
+    }
+
+    .category-circle {
+        width: 105px;
+        height: 105px;
+    }
+
+    .join-title {
+        font-size: 24px;
+    }
+
+    .social-title {
+        font-size: 22px;
+    }
+
+    .transparency-title {
+        font-size: 24px;
+    }
+
+    .perks-bar-item {
+        flex: 1 1 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .perks-bar-item p {
+        width: auto;
+        height: auto;
+    }
+
+    .footer-links-list {
+        width: 100%;
+    }
+}
