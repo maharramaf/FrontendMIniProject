@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caraway Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/detail.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="promo-bar">
+            <div class="promo-track">
+                <p class="promo-slide">
+                    Want to Win $100,000? |
+                    <a href="#" class="promo-link">Shop To Enter</a>
+                </p>
+
+                <p class="promo-slide">
+                    Free Shipping on Orders $90+ |
+                    <a href="#" class="promo-link">Shop Now</a>
+                </p>
+
+                <p class="promo-slide">
+                    <span class="promo-bold">LIMITED TIME</span>
+                    | Save $230 With Our Best-Selling Cookware Set |
+                    <a href="#" class="promo-link">Shop Now →</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="header-main">
+
+            <button type="button" class="hamburger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-left">
+                <ul>
+                    <li class="dropdown">
+
+                        <a href="#" class="has-arrow">
+                            <span class="about-text">About</span>
+                            <span class="arrow-down"></span>
+                        </a>
+
+                        <div class="dropdown-menu">
+                            <a href="#">Our Story</a>
+                            <a href="#" class="join-fight-link"><span class="join-fight-inline">Join Our Fight <img src="./images/join-fight-icon.png?v=3" alt="" class="join-fight-icon"></span></a>
+                            <a href="#">Made Better</a>
+                            <a href="#">Our Materials</a>
+                            <a href="#">Quit Microplastics</a>
+                            <a href="#">Caraway Home Blog</a>
+                            <a href="#">Third-Party Test Results</a>
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <a href="#">Reviews</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Quiz</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="join-fight">
+                            Join Our Fight <img src="./images/join-fight-icon.png?v=3" alt="" class="join-fight-icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="logo">
+                <a href="#"><img src="./images/logo.png" alt="Caraway" class="logo-img"></a>
+            </div>
+
+            <div class="nav-right">
+
+                <div class="search-box">
+
+                    <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Find Clean Cookware"
+                    >
+
+                    <a href="#" class="search-clear"><i class="fa-solid fa-xmark"></i></a>
+
+                </div>
+
+                <div class="cart-icon">
+                    <a href="#" class="pot-icon">
+                        <img src="./images/cart-icon.png" alt="Cart" class="pot-icon-img">
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="search-panel">
+
+                <div class="search-suggestions">
+                    <h3 class="search-suggestions-title">Suggestions</h3>
+                    <a href="#" class="search-suggestion">Cookware</a>
+                    <a href="#" class="search-suggestion">Food Storage</a>
+                    <a href="#" class="search-suggestion">Bakeware</a>
+                    <a href="#" class="search-suggestion">Prepware</a>
+                    <a href="#" class="search-suggestion">Accessories</a>
+                </div>
+
+                <div class="search-bestsellers">
+                    <h3 class="search-bestsellers-title">Best Sellers</h3>
+
+                    <div class="search-products">
+
+                        <div class="search-product">
+                            <div class="search-product-image search-product-image-full">
+                                <img src="./images/cookware-set.png" alt="Cookware Set" class="img-base">
+                                <img src="./images/cookware-set-hover.png" alt="Cookware Set lifestyle" class="img-hover">
+                            </div>
+
+                            <p class="search-product-name">Cookware Set</p>
+
+                            <p class="search-product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                (4.8)
+                            </p>
+
+                            <p class="search-product-price">
+                                <span class="price-old">$675</span>
+                                <span class="price-new">$445</span>
+                            </p>
+
+                            <p class="search-product-discount">
+                                (34% off)
+                                <span class="tag tag-save">SAVE $230</span>
+                            </p>
+
+                            <div class="search-product-colors">
+                                <span class="color-dot color-cream"></span>
+                                <span class="color-dot color-navy"></span>
+                                <span class="color-dot color-gray"></span>
+                                <span class="color-dot color-terracotta"></span>
+                                <span class="color-dot color-green"></span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+
+                            <p class="search-product-desc">12-pc non-stick ceramic cookware set with storage</p>
+
+                            <a href="#" class="search-product-quickshop">Quick Shop <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="search-product">
+                            <div class="search-product-image search-product-image-full">
+                                <img src="./images/minis-duo.png" alt="Minis Duo" class="img-base">
+                                <img src="./images/minis-duo-hover.png" alt="Minis Duo lifestyle" class="img-hover">
+                            </div>
+
+                            <p class="search-product-name">Minis Duo</p>
+
+                            <p class="search-product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                (4.8)
+                            </p>
+
+                            <p class="search-product-price">
+                                <span class="price-old">$270</span>
+                                <span class="price-new">$225</span>
+                                (17% off)
+                                <span class="tag tag-save">SAVE $45</span>
+                            </p>
+
+                            <div class="search-product-colors">
+                                <span class="color-dot color-yellow"></span>
+                                <span class="color-dot color-cream"></span>
+                                <span class="color-dot color-navy"></span>
+                                <span class="color-dot color-gray"></span>
+                                <span class="color-dot color-coral"></span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+
+                            <p class="search-product-desc">2 mini ceramic pans for single servings and sides</p>
+
+                            <a href="#" class="search-product-quickshop">Quick Shop <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <nav class="sub-nav">
+            <div class="sub-dropdown">
+                <a href="#" class="sub-nav-item shop-all-toggle"><span class="sub-nav-text">Shop All</span> <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+
+                <div class="mega-menu">
+                  <div class="mega-menu-inner">
+
+                    <a href="#" class="mega-promo">
+                        <img src="./images/promo-cookware-set.png" alt="Save $230 on the Cookware Set">
+                    </a>
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/clean-start-bundle.png" alt="Clean Start Bundle">
+                        </div>
+                        <p class="mega-product-name">Clean Start Bundle</p>
+                        <p class="mega-product-desc">40-pc set to kickstart clean cooking</p>
+                    </a>
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/bakeware-set.png" alt="Bakeware Set">
+                        </div>
+                        <p class="mega-product-name">Bakeware Set</p>
+                        <p class="mega-product-desc">11-Piece Set with Storage</p>
+                    </a>
+
+                    <div class="mega-collections">
+                        <h4 class="mega-collections-title">Shop By Collection</h4>
+                        <a href="#" class="mega-collection-link">Best Sellers</a>
+                        <a href="#" class="mega-collection-link">New Arrivals</a>
+                        <a href="#" class="mega-collection-link">Minis Collection</a>
+                        <a href="#" class="mega-collection-link">Shop All Cookware <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="mega-collection-link">Shop All Bakeware <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="mega-collection-link">Shop All Bundles <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="mega-collection-link">Shop All <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+            <a href="#" class="sub-nav-item"><span class="sub-nav-text">$100k Sweeps ✨</span></a>
+
+            <div class="sub-dropdown">
+                <a href="#" class="sub-nav-item"><span class="sub-nav-text">Cookware</span> <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+
+                <div class="mega-menu">
+                  <div class="mega-menu-inner">
+
+                    <a href="#" class="mega-product mega-product-wide">
+                        <div class="mega-product-image mega-product-image-wide">
+                            <img src="./images/cookware-minis-set.png" alt="Cookware & Minis Set" class="mega-preview-img">
+                        </div>
+                        <p class="mega-product-name mega-preview-name">Cookware & Minis Set</p>
+                        <p class="mega-product-desc mega-preview-desc">Non-Stick Cookware for Easy Everyday Use</p>
+                    </a>
+
+                    <div class="mega-collections">
+                        <h4 class="mega-collections-title">Shop By Category</h4>
+                        <a href="#" class="mega-collection-link" data-preview-img="./images/cookware-sets-duos.png" data-preview-name="Cookware Sets & Duos" data-preview-desc="Best Selling Cookware for a Home Makeover">Cookware Sets & Duos</a>
+                        <a href="#" class="mega-collection-link" data-preview-img="./images/pans-stir-fry.png" data-preview-name="Pans & Stir Fry" data-preview-desc="Pans for Quick Sears & Single-Servings">Pans & Stir Fry</a>
+                        <a href="#" class="mega-collection-link" data-preview-img="./images/pots-sauce-pans.png" data-preview-name="Pots & Sauce Pans" data-preview-desc="Perfect for Rice, Sauce & Side Dishes">Pots & Sauce Pans</a>
+                        <a href="#" class="mega-collection-link" data-preview-img="./images/grill-griddle.png" data-preview-name="Grill & Griddle" data-preview-desc="Ceramic Pans Great for Barbecues & Brunches">Grill & Griddle</a>
+                        <a href="#" class="mega-collection-link" data-preview-img="./images/lids-accessories.png" data-preview-name="Lids & Accessories" data-preview-desc="Kitchen Essentials for the Conscious Cook">Lids & Accessories</a>
+                        <a href="#" class="mega-collection-link" data-preview-img="./images/cookware-minis-set.png" data-preview-name="Cookware & Minis Set" data-preview-desc="Non-Stick Cookware for Easy Everyday Use">Shop All Cookware <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="mega-collections mega-collections-spaced">
+                        <h4 class="mega-collections-title">Shop By Material</h4>
+                        <a href="#" class="mega-collection-link" data-preview-img="./images/ceramic-coated.png" data-preview-name="Ceramic-Coated" data-preview-desc="Non-Toxic, Super Slick Non-Stick Pans">Ceramic-Coated</a>
+                        <a href="#" class="mega-collection-link" data-preview-img="./images/stainless-steel.png" data-preview-name="Stainless Steel" data-preview-desc="Durable 5-ply Steel to Distribute Heat Evenly">Stainless Steel</a>
+                        <a href="#" class="mega-collection-link" data-preview-img="./images/enameled-cast-iron.png" data-preview-name="Enameled Cast Iron" data-preview-desc="3 Layers of Ultra-Durable Enamel">Enameled Cast Iron</a>
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="sub-dropdown">
+                <a href="#" class="sub-nav-item"><span class="sub-nav-text">Bakeware</span> <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+
+                <div class="mega-menu">
+                  <div class="mega-menu-inner">
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/bakeware-set-promo.png" alt="Bakeware Set">
+                        </div>
+                        <p class="mega-product-name">Bakeware Set</p>
+                        <p class="mega-product-desc">11-Piece Set with Storage</p>
+                    </a>
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/baking-sheet-trio.png" alt="Baking Sheet Trio">
+                        </div>
+                        <p class="mega-product-name">Baking Sheet Trio</p>
+                        <p class="mega-product-desc">Large, Medium, & Small Sheets</p>
+                    </a>
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/mini-bakeware-set.png" alt="Mini Bakeware Set">
+                        </div>
+                        <p class="mega-product-name">Mini Bakeware Set</p>
+                        <p class="mega-product-desc">6-piece mini bakeware set</p>
+                    </a>
+
+                    <div class="mega-collections mega-collections-spaced">
+                        <h4 class="mega-collections-title">Shop By Category</h4>
+                        <a href="#" class="mega-collection-link">Bakeware Sets & Duos</a>
+                        <a href="#" class="mega-collection-link">Baking Sheets & Cooling Racks</a>
+                        <a href="#" class="mega-collection-link">Mixing Bowls & Strainers</a>
+                        <a href="#" class="mega-collection-link">Cake & Pie Pans</a>
+                        <a href="#" class="mega-collection-link">Muffin & Loaf Pans</a>
+                        <a href="#" class="mega-collection-link">Pizza Pans</a>
+                        <a href="#" class="mega-collection-link">Shop All Bakeware <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="sub-dropdown">
+                <a href="#" class="sub-nav-item"><span class="sub-nav-text">Storage &amp; Organization</span> <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+
+                <div class="mega-menu">
+                  <div class="mega-menu-inner mega-menu-inner-large">
+
+                    <a href="#" class="mega-promo">
+                        <img src="./images/storage-promo.png" alt="Introducing: Trash & Recycling">
+                    </a>
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/food-storage-promo.png" alt="Food Storage">
+                        </div>
+                        <p class="mega-product-name">Food Storage</p>
+                        <p class="mega-product-desc">The complete 13-piece storage set</p>
+                    </a>
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/glass-airtight-set.png" alt="Glass Airtight Container Set">
+                        </div>
+                        <p class="mega-product-name">Glass Airtight Container Set</p>
+                        <p class="mega-product-desc">Modular, non-toxic home organization</p>
+                    </a>
+
+                    <div class="mega-collections mega-collections-spaced">
+                        <h4 class="mega-collections-title">Shop By Category</h4>
+                        <a href="#" class="mega-collection-link mega-collection-active">Trash & Recycling</a>
+                        <a href="#" class="mega-collection-link">Food Storage</a>
+                        <a href="#" class="mega-collection-link">Airtight Storage</a>
+                        <a href="#" class="mega-collection-link">Accessories</a>
+                        <a href="#" class="mega-collection-link">Shop All <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="sub-dropdown">
+                <a href="#" class="sub-nav-item"><span class="sub-nav-text">Kitchen Tools</span> <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+
+                <div class="mega-menu">
+                  <div class="mega-menu-inner mega-menu-inner-shift-left">
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/cutting-board-set.png" alt="Cutting Board Set">
+                        </div>
+                        <p class="mega-product-name">Cutting Board Set</p>
+                        <p class="mega-product-desc">4-Piece FSC-Certified Board Set</p>
+                    </a>
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/mixing-bowl-set.png" alt="Mixing Bowl Set">
+                        </div>
+                        <p class="mega-product-name">Mixing Bowl Set</p>
+                        <p class="mega-product-desc">6-pc Set With Durable Glass Lids</p>
+                    </a>
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/knife-utensil-set.png" alt="Knife & Utensil Set">
+                        </div>
+                        <p class="mega-product-name">Knife & Utensil Set</p>
+                        <p class="mega-product-desc">Essential 14-Piece Set with Storage</p>
+                    </a>
+
+                    <div class="mega-collections mega-collections-spaced">
+                        <h4 class="mega-collections-title">Shop By Category</h4>
+                        <a href="#" class="mega-collection-link">Knives & Utensils</a>
+                        <a href="#" class="mega-collection-link">Cutting Boards & Butcher Blocks</a>
+                        <a href="#" class="mega-collection-link mega-collection-active">Mixing Bowls & Strainers</a>
+                        <a href="#" class="mega-collection-link">Kitchen Gadgets</a>
+                        <a href="#" class="mega-collection-link">Bar Set</a>
+                        <a href="#" class="mega-collection-link">Tea Kettle</a>
+                        <a href="#" class="mega-collection-link">Shop All Kitchen Tools <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="sub-dropdown">
+                <a href="#" class="sub-nav-item"><span class="sub-nav-text">Accessories</span> <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+
+                <div class="mega-menu">
+                  <div class="mega-menu-inner">
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/glass-lid-set.png" alt="Glass Lid Set">
+                        </div>
+                        <p class="mega-product-name">Glass Lid Set</p>
+                        <p class="mega-product-desc">Premium Lids with Storage</p>
+                    </a>
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/steamer-duo.png" alt="Steamer Duo">
+                        </div>
+                        <p class="mega-product-name">Steamer Duo</p>
+                        <p class="mega-product-desc">Non-Toxic, Non-Stick Steamers</p>
+                    </a>
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/gift-card.png" alt="Gift Card">
+                        </div>
+                        <p class="mega-product-name">Gift Card</p>
+                        <p class="mega-product-desc">Give the Gift of Clean Cooking</p>
+                    </a>
+
+                    <div class="mega-collections mega-collections-spaced">
+                        <h4 class="mega-collections-title">Shop By Category</h4>
+                        <a href="#" class="mega-collection-link">Glass Lids & Steamers</a>
+                        <a href="#" class="mega-collection-link">Lid Organizer</a>
+                        <a href="#" class="mega-collection-link">Grill Press, Spoon Rest, & Timer</a>
+                        <a href="#" class="mega-collection-link">Kitchen Linens</a>
+                        <a href="#" class="mega-collection-link">Dots & Dash Containers</a>
+                        <a href="#" class="mega-collection-link">Airtight Spoon & Scoop</a>
+                        <a href="#" class="mega-collection-link">Gift Card</a>
+                        <a href="#" class="mega-collection-link">Shop All Accessories <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="sub-dropdown">
+                <a href="#" class="sub-nav-item sub-nav-highlight"><span class="sub-nav-text">Exclusive Savings</span> <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+
+                <div class="mega-menu">
+                  <div class="mega-menu-inner mega-menu-inner-text-large">
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/clean-start-bundle-savings.png" alt="Clean Start Bundle">
+                        </div>
+                        <p class="mega-product-name">Clean Start Bundle</p>
+                        <p class="mega-product-desc">40-Piece Set With<br>Complimentary Storage</p>
+                    </a>
+
+                    <a href="#" class="mega-product">
+                        <div class="mega-product-image">
+                            <img src="./images/full-ceramic-cookware-bundle.png" alt="Full Ceramic Cookware Bundle">
+                        </div>
+                        <p class="mega-product-name">Full Ceramic Cookware Bundle</p>
+                        <p class="mega-product-desc">31-Piece Ceramic Set With<br>Complimentary Storage</p>
+                    </a>
+
+                    <div class="mega-collections mega-collections-spaced mega-collections-large-text">
+                        <h4 class="mega-collections-title">Shop Savings</h4>
+                        <a href="#" class="mega-collection-link mega-collection-highlight">Exclusive Savings</a>
+                        <a href="#" class="mega-collection-link">Bundle & Save</a>
+                        <a href="#" class="mega-collection-link">Shop All <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mobile-nav-overlay"></div>
+        <div class="mobile-nav-drawer">
+            <div class="mobile-nav-top">
+                <img src="./images/logo.png" alt="Caraway" class="mobile-nav-logo">
+                <button type="button" class="mobile-nav-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <nav class="mobile-nav-links">
+                <a href="#">Shop All</a>
+                <a href="#">$100k Sweeps ✨</a>
+                <a href="#">Cookware</a>
+                <a href="#">Bakeware</a>
+                <a href="#">Storage &amp; Organization</a>
+                <a href="#">Kitchen Tools</a>
+                <a href="#">Accessories</a>
+                <a href="#" class="mobile-nav-highlight">Exclusive Savings</a>
+                <div class="mobile-nav-divider"></div>
+                <a href="#">About</a>
+                <a href="#">Reviews</a>
+                <a href="#">Quiz</a>
+                <a href="#">Join Our Fight</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="pdp">
+
+            <p class="pdp-breadcrumb"><a href="#">Shop All</a> /</p>
+
+            <div class="pdp-layout">
+
+                <div class="pdp-gallery">
+
+                    <div class="pdp-gallery-main">
+                        <button type="button" class="pdp-gallery-arrow pdp-gallery-arrow-prev"><i class="fa-solid fa-chevron-left"></i></button>
+
+                        <img src="./images/full-ceramic-bundle-hero.png" alt="Full Ceramic Cookware Bundle" class="pdp-gallery-img">
+
+                        <button type="button" class="pdp-gallery-arrow pdp-gallery-arrow-next"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
+                    <div class="pdp-gallery-thumbs">
+                        <button type="button" class="pdp-gallery-thumb pdp-gallery-thumb-active" data-full="./images/full-ceramic-bundle-hero.png">
+                            <img src="./images/full-ceramic-bundle-hero.png" alt="">
+                        </button>
+
+                        <button type="button" class="pdp-gallery-thumb" data-full="./images/full-ceramic-bundle-gallery.png">
+                            <img src="./images/full-ceramic-bundle-gallery.png" alt="">
+                        </button>
+
+                        <button type="button" class="pdp-gallery-thumb" data-full="./images/full-ceramic-bundle-slide3.png">
+                            <img src="./images/full-ceramic-bundle-slide3.png" alt="">
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="pdp-info">
+
+                    <span class="pdp-badge"><i class="fa-solid fa-fire"></i> SELLING FAST</span>
+
+                    <h1 class="pdp-title">Cookware Set</h1>
+                    <p class="pdp-subtitle">12-Piece Ceramic Set With Storage Organizers</p>
+
+                    <div class="pdp-row">
+                        <p class="pdp-rating">
+                            <span class="pdp-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            (4.8) 77,327 Aggregated Reviews*
+                        </p>
+
+                        <p class="pdp-price">
+                            <span class="price-old">$675</span>
+                            <span class="price-new">$445</span>
+                            <span class="info-icon">i</span>
+                        </p>
+                    </div>
+
+                    <div class="pdp-row">
+                        <p class="pdp-payment">4 payments of $112 with <span class="pdp-shoppay">Shop <b>Pay</b></span></p>
+
+                        <p class="pdp-discount">(34% off) <span class="tag tag-save">SAVE $230</span></p>
+                    </div>
+
+                    <hr class="pdp-divider">
+
+                    <div class="pdp-select-block">
+                        <p class="pdp-select-label">Select Product: <span class="pdp-select-value">12-pc Set</span></p>
+
+                        <div class="pdp-options pdp-options-product">
+                            <button type="button" class="pdp-option">6-pc Set</button>
+
+                            <button type="button" class="pdp-option pdp-option-selected">12-pc Set</button>
+
+                            <div class="pdp-option-wrap">
+                                <span class="pdp-option-tag">BEST SELLER</span>
+                                <button type="button" class="pdp-option">16-pc Set</button>
+                            </div>
+
+                            <button type="button" class="pdp-option">24-pc Set</button>
+
+                            <div class="pdp-option-wrap">
+                                <span class="pdp-option-tag pdp-option-tag-value">BEST VALUE</span>
+                                <button type="button" class="pdp-option">31-pc Set</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pdp-select-block">
+                        <p class="pdp-select-label">Select Color: <span class="pdp-select-value">Cream</span></p>
+
+                        <div class="pdp-options pdp-options-color">
+                            <button type="button" class="pdp-color pdp-color-selected"><span class="color-dot color-cream"></span></button>
+                            <button type="button" class="pdp-color"><span class="color-dot color-navy"></span></button>
+                            <button type="button" class="pdp-color"><span class="color-dot color-gray"></span></button>
+                            <button type="button" class="pdp-color"><span class="color-dot color-green"></span></button>
+                            <button type="button" class="pdp-color"><span class="color-dot color-coral"></span></button>
+                            <button type="button" class="pdp-color"><span class="color-dot color-yellow"></span></button>
+                            <button type="button" class="pdp-color"><span class="color-dot color-black"></span></button>
+                            <button type="button" class="pdp-color"><span class="color-dot color-tan"></span></button>
+                        </div>
+                    </div>
+
+                    <div class="pdp-addons">
+                        <h3 class="pdp-addons-title">Don't Forget These</h3>
+
+                        <div class="pdp-addon">
+                            <label class="pdp-addon-check">
+                                <input type="checkbox">
+                            </label>
+
+                            <div class="pdp-addon-image">
+                                <img src="./images/glass-lid-set.png" alt="Glass Lid">
+                            </div>
+
+                            <div class="pdp-addon-info">
+                                <p class="pdp-addon-name">Glass Lid <a href="#" class="pdp-addon-details">Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                                <p class="pdp-addon-desc">Premium Glass Lid built to pair with the 6.5 qt Dutch Oven for effortless simmering and steaming.</p>
+                            </div>
+
+                            <p class="pdp-addon-price">$60</p>
+                        </div>
+
+                        <div class="pdp-addon">
+                            <label class="pdp-addon-check">
+                                <input type="checkbox">
+                            </label>
+
+                            <div class="pdp-addon-image">
+                                <img src="./images/glass-lid-set.png" alt="Glass Lid">
+                            </div>
+
+                            <div class="pdp-addon-info">
+                                <p class="pdp-addon-name">Glass Lid <a href="#" class="pdp-addon-details">Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                                <p class="pdp-addon-desc">Premium Glass Lid made to pair with the 3 qt Sauce & 8" Mini Fry Pan.</p>
+                            </div>
+
+                            <p class="pdp-addon-price">$55</p>
+                        </div>
+
+                        <div class="pdp-addon">
+                            <label class="pdp-addon-check">
+                                <input type="checkbox">
+                            </label>
+
+                            <div class="pdp-addon-image">
+                                <img src="./images/utensil-set.png" alt="Utensil Set">
+                            </div>
+
+                            <div class="pdp-addon-info">
+                                <p class="pdp-addon-name">Utensil Set <a href="#" class="pdp-addon-details">Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                                <p class="pdp-addon-desc">5-Piece FSC-Certified Birch Wood Set</p>
+                            </div>
+
+                            <p class="pdp-addon-price">$145</p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="pdp-add-to-cart">Add To Cart</button>
+
+                    <p class="pdp-save-note">Save $665 &amp; Free Shipping</p>
+
+                </div>
+
+            </div>
+
+            <section class="why-made">
+                <div class="why-made-text">
+                    <span class="why-made-badge">WHY WE MADE THIS</span>
+                    <h2 class="why-made-title">The New Standard for Clean Cookware</h2>
+                    <p class="why-made-desc">Crafted with a slick ceramic coating made without forever chemicals, our products are designed to raise the standard of what you cook with—making your life clean, simple, and effortless.</p>
+                    <a href="#" class="why-made-btn">The Caraway Promise <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="why-made-image">
+                    <img src="./images/why-we-made-this-photo.png" alt="Caraway cookware on a marble counter">
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-newsletter">
+                <h2 class="footer-newsletter-title">Unlock free shipping on your next order</h2>
+                <p class="footer-newsletter-text">Subscribe today to get free shipping and early access to new collections & exclusive offers.</p>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <label class="footer-terms-check">
+                    <input type="checkbox">
+                    I agree to the <a href="#">Terms and Conditions</a>
+                </label>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-links-col">
+                    <h3>Shop</h3>
+                    <div class="footer-links-list footer-links-list-shop">
+                        <a href="#">Cookware</a>
+                        <a href="#">Best Sellers</a>
+                        <a href="#">New Arrivals</a>
+                        <a href="#">Bundle & Save</a>
+                        <a href="#">Retail Locations</a>
+                        <a href="#">Take the Quiz</a>
+                        <a href="#">Send a Gift</a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h3>Company</h3>
+                    <div class="footer-links-list footer-links-list-company">
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Our Story</a>
+                        <a href="#">Our Materials</a>
+                        <a href="#">Third-Party Test Results</a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h3>Help</h3>
+                    <div class="footer-links-list footer-links-list-help">
+                        <a href="#">FAQs</a>
+                        <a href="#">Warranty</a>
+                        <a href="#">My Account</a>
+                        <a href="#">Order Status</a>
+                        <a href="#">Accessibility</a>
+                        <a href="#">Returns Portal</a>
+                        <a href="#">Care & Cleaning</a>
+                        <a href="#">Shipping & Returns</a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h3>Contact</h3>
+                    <div class="footer-links-list footer-links-list-contact">
+                        <a href="#">Contact Us</a>
+                        <a href="#">Trade Program</a>
+                        <a href="#">Press Inquiries</a>
+                        <a href="#">Become an Affiliate</a>
+                        <a href="#">Become an Ambassador</a>
+                        <a href="#">Hello@carawayhome.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">
+                <a href="#" class="footer-disclaimer">NO PURCHASE NECESSARY. Ends 9/10/26. Must be: i) a legal US resident of the 50 US or DC and age of majority or ii) a legal resident of Canada (excl. Quebec) and age of majority at time of entry. Subject to Official Rules available at sharedsweeps.com/rules</a>
+                <p class="footer-legal-links">
+                    <a href="#">Terms and Conditions</a> · <a href="#">Privacy Policy</a> · <a href="#">Warranty</a> · <a href="#">Patents</a> · <a href="#">CA AB1200</a> · <a href="#">Do Not Sell My Information</a>
+                </p>
+            </div>
+            <div class="footer-bottom-right">
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <p class="footer-copyright">© 2026 Caraway®</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-overlay"></div>
+
+    <aside class="cart-panel">
+
+        <div class="cart-panel-top">
+            <a href="#" class="cart-close"><i class="fa-regular fa-circle-xmark"></i></a>
+            <h2 class="cart-panel-title">Your Cart</h2>
+            <span class="cart-panel-count">0</span>
+        </div>
+
+        <div class="cart-win">
+            <p class="cart-win-title">Increase your chances to win $100k!</p>
+            <p class="cart-win-text">
+                Make the swap from PFAS, win big.
+                <span class="info-icon">i</span>
+            </p>
+
+            <div class="cart-entries">
+                <div class="cart-entry">+500 Entries</div>
+                <div class="cart-entry">+1,000 Entries</div>
+                <div class="cart-entry">+3,000 Entries</div>
+            </div>
+        </div>
+
+        <div class="cart-panel-body">
+
+            <div class="cart-sweepstakes">
+                <p class="cart-sweepstakes-title">
+                    $100K Dream Kitchen Sweepstakes
+                    <i class="fa-solid fa-circle-info"></i>
+                </p>
+                <p class="cart-sweepstakes-text">Complete your purchase and claim 0 entries to win</p>
+            </div>
+
+            <h3 class="cart-empty-title">Your Cart is Empty</h3>
+            <p class="cart-empty-text">Get started with the Caraway essentials!</p>
+
+            <div class="cart-products">
+
+                <div class="cart-product">
+                    <div class="cart-product-image">
+                        <img src="./images/cookware.png" alt="Cookware">
+                    </div>
+                    <p class="cart-product-label">Shop Cookware</p>
+                </div>
+
+                <div class="cart-product">
+                    <div class="cart-product-image">
+                        <img src="./images/food-storage.png" alt="Food Storage">
+                    </div>
+                    <p class="cart-product-label">Shop Food Storage</p>
+                </div>
+
+                <div class="cart-product">
+                    <div class="cart-product-image">
+                        <img src="./images/bundles.png" alt="Bundles">
+                    </div>
+                    <p class="cart-product-label">Shop Bundles</p>
+                </div>
+
+            </div>
+
+            <a href="#" class="cart-btn cart-btn-dark">Shop Best Sellers <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="cart-btn cart-btn-outline">Shop All <i class="fa-solid fa-arrow-right"></i></a>
+
+            <div class="cart-perks">
+
+                <div class="cart-perk">
+                    <img class="cart-perk-icon" src="./images/perk-shipping.png?v=3" alt="Free Shipping">
+                    <p class="cart-perk-text">Free Shipping<br>On Orders $90+</p>
+                </div>
+
+                <div class="cart-perk">
+                    <img class="cart-perk-icon" src="./images/perk-returns.png?v=3" alt="Free Returns">
+                    <p class="cart-perk-text">Free Returns</p>
+                </div>
+
+                <div class="cart-perk">
+                    <img class="cart-perk-icon" src="./images/perk-trial.png?v=3" alt="30-Day Trial">
+                    <p class="cart-perk-text">30-Day Trial</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/detail.js"></script>
+
+</body>
+</html>
