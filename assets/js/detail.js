@@ -234,3 +234,88 @@ if (pdpGalleryImg && pdpGalleryThumbs.length > 0) {
     }
 
 }
+
+/* Sticky product bar */
+const pdpStickyBar = document.getElementById("pdp-sticky-bar");
+const pdpStickyTrigger = document.querySelector(".why-made") || document.querySelector(".pdp-layout");
+const siteHeader = document.querySelector("header");
+
+if (pdpStickyBar && pdpStickyTrigger && siteHeader) {
+
+    pdpStickyBar.style.top = siteHeader.offsetHeight + "px";
+
+    window.addEventListener("resize", () => {
+        pdpStickyBar.style.top = siteHeader.offsetHeight + "px";
+    });
+
+    window.addEventListener("scroll", () => {
+        const triggerBottom = pdpStickyTrigger.getBoundingClientRect().bottom;
+        pdpStickyBar.classList.toggle("pdp-sticky-visible", triggerBottom < 0);
+    });
+
+}
+
+/* Sync color pickers (main select-color + sticky bar) */
+const pdpMainColorButtons = document.querySelectorAll(".pdp-main-colors .pdp-color");
+const pdpStickyColorButtons = document.querySelectorAll(".pdp-sticky-colors .pdp-color");
+const pdpMainColorValue = document.querySelector(".pdp-main-color-value");
+const pdpStickyColorValue = document.querySelector(".pdp-sticky-color-value");
+
+function selectPdpColor(colorName) {
+
+    [...pdpMainColorButtons, ...pdpStickyColorButtons].forEach((btn) => {
+        btn.classList.toggle("pdp-color-selected", btn.dataset.color === colorName);
+    });
+
+    if (pdpMainColorValue) {
+        pdpMainColorValue.textContent = colorName;
+    }
+
+    if (pdpStickyColorValue) {
+        pdpStickyColorValue.textContent = colorName;
+    }
+
+}
+
+[...pdpMainColorButtons, ...pdpStickyColorButtons].forEach((btn) => {
+    btn.addEventListener("click", () => selectPdpColor(btn.dataset.color));
+});
+
+/* What's Included card videos: play on hover, pause otherwise */
+const wiCardVideos = document.querySelectorAll(".wi-card-video");
+
+wiCardVideos.forEach((video) => {
+
+    const card = video.closest(".wi-card-image");
+
+    if (!card) {
+        return;
+    }
+
+    card.addEventListener("mouseenter", () => {
+        video.play();
+    });
+
+    card.addEventListener("mouseleave", () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+
+});
+
+/* What's Included tabs */
+const wiTabs = document.querySelectorAll(".wi-tab");
+const wiPanels = document.querySelectorAll(".whats-included-grid");
+
+wiTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+
+        wiTabs.forEach((t) => t.classList.remove("wi-tab-active"));
+        tab.classList.add("wi-tab-active");
+
+        wiPanels.forEach((panel) => {
+            panel.hidden = panel.dataset.tabPanel !== tab.dataset.tab;
+        });
+
+    });
+});
