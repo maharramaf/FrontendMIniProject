@@ -303,6 +303,55 @@ wiCardVideos.forEach((video) => {
 
 });
 
+/* Cleaner Cooking accordion */
+const ccItems = document.querySelectorAll(".cc-item");
+
+ccItems.forEach((item) => {
+
+    const header = item.querySelector(".cc-item-header");
+    const icon = item.querySelector(".cc-item-icon");
+
+    header.addEventListener("click", () => {
+
+        const isActive = item.classList.contains("cc-item-active");
+
+        ccItems.forEach((otherItem) => {
+            otherItem.classList.remove("cc-item-active");
+            const otherIcon = otherItem.querySelector(".cc-item-icon");
+            otherIcon.classList.remove("fa-minus");
+            otherIcon.classList.add("fa-plus");
+        });
+
+        if (!isActive) {
+            item.classList.add("cc-item-active");
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+        }
+
+    });
+
+});
+
+/* Questions? We Have Answers. accordion */
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+
+    const header = item.querySelector(".faq-item-header");
+    const icon = item.querySelector(".faq-item-icon");
+
+    header.addEventListener("click", () => {
+
+        const isActive = item.classList.contains("faq-item-active");
+
+        item.classList.toggle("faq-item-active", !isActive);
+        icon.classList.toggle("fa-plus", isActive);
+        icon.classList.toggle("fa-minus", !isActive);
+
+    });
+
+});
+
 /* What's Included tabs */
 const wiTabs = document.querySelectorAll(".wi-tab");
 const wiPanels = document.querySelectorAll(".whats-included-grid");
@@ -319,3 +368,43 @@ wiTabs.forEach((tab) => {
 
     });
 });
+
+/* Discover Clean Kitchenware (Swiper) */
+const discoverCleanSection = document.querySelector("#discover-clean");
+
+if (discoverCleanSection && window.Swiper) {
+
+    const dcTrack = discoverCleanSection.querySelector(".carousel-track");
+    const dcPrev = discoverCleanSection.querySelector(".carousel-arrow.prev");
+    const dcNext = discoverCleanSection.querySelector(".carousel-arrow.next");
+
+    const dcSwiper = new Swiper(dcTrack, {
+        slidesPerView: 1.15,
+        slidesPerGroup: 1,
+        spaceBetween: 4,
+        speed: 700,
+        a11y: false,
+        loop: true,
+        breakpoints: {
+            481: {
+                slidesPerView: 2.15,
+                slidesPerGroup: 2,
+                spaceBetween: 4,
+            },
+            769: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 4,
+            },
+            1025: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+                spaceBetween: 4,
+            },
+        },
+    });
+
+    dcPrev.addEventListener("click", () => dcSwiper.slidePrev());
+    dcNext.addEventListener("click", () => dcSwiper.slideNext());
+
+}

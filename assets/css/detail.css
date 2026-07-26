@@ -1637,7 +1637,7 @@ header {
 .pdp {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 24px 40px 80px;
+    padding: 24px 40px 0;
 }
 
 .pdp-breadcrumb {
@@ -2098,6 +2098,137 @@ header {
     }
 }
 
+/* Cleaner Cooking, Without Compromise */
+
+.cleaner-cooking {
+    max-width: 1400px;
+    margin: 60px auto 0;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.cc-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.cc-text {
+    flex: 0 0 420px;
+    width: 420px;
+    box-sizing: border-box;
+}
+
+.cc-specs {
+    font-family: 'Moderat', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1f3438;
+    margin: 0 0 8px;
+}
+
+.cc-dimensions-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Moderat', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f3438;
+    text-decoration: underline;
+    margin-bottom: 24px;
+}
+
+.cc-title {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    line-height: 1.25;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+}
+
+.cc-accordion {
+    border-top: 1px solid #e5e0d5;
+}
+
+.cc-item {
+    border-bottom: 1px solid #e5e0d5;
+}
+
+.cc-item-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: none;
+    border: none;
+    padding: 22px 0;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: left;
+    cursor: pointer;
+}
+
+.cc-item-icon {
+    flex: none;
+    font-size: 14px;
+    color: #1a1a1a;
+}
+
+.cc-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.cc-item-body p {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin: 0 0 24px;
+}
+
+.cc-item-active .cc-item-body {
+    max-height: 200px;
+}
+
+.cc-image {
+    flex: 0 0 670px;
+    width: 670px;
+    height: 574.51px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.cc-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .cc-inner {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .cc-text {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .cc-image {
+        flex-basis: auto;
+        width: 100%;
+        height: 320px;
+    }
+}
+
 /* Why We Made This */
 
 .why-made {
@@ -2413,6 +2544,201 @@ header {
     }
 }
 
+/* Caraway Vs Competitors */
+
+.cvc {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin: 60px 0 0 -50vw;
+    padding: 60px 40px;
+    background-color: #efefef;
+    box-sizing: border-box;
+}
+
+.cvc-badge-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.cvc-badge {
+    background-color: #1f3438;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 30px;
+}
+
+.cvc-table {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.cvc-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e5e0d5;
+}
+
+.cvc-row-head {
+    align-items: flex-end;
+    border-bottom: none;
+}
+
+.cvc-row-last {
+    border-bottom: none;
+}
+
+.cvc-label-cell {
+    flex: 0 0 340px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    padding: 24px 24px 24px 0;
+    box-sizing: border-box;
+}
+
+.cvc-row-head .cvc-label-cell {
+    padding-bottom: 20px;
+}
+
+.cvc-label-title {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 6px;
+}
+
+.cvc-label-desc {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #6b6b6b;
+    margin: 0;
+}
+
+.cvc-col {
+    flex: 0 0 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.cvc-col-caraway {
+    background-color: #ffffff;
+    border-left: 1px solid #e0dccf;
+    border-right: 1px solid #e0dccf;
+    align-self: stretch;
+}
+
+.cvc-row-head .cvc-col-caraway {
+    border-top: 1px solid #e0dccf;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 20px;
+}
+
+.cvc-row-last .cvc-col-caraway {
+    border-bottom: 1px solid #e0dccf;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.cvc-row-head .cvc-col-traditional {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 20px;
+}
+
+.cvc-thumb {
+    width: 115px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cvc-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cvc-col-title {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin: 0;
+    max-width: 180px;
+}
+
+.cvc-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.cvc-icon-full {
+    background-color: #c96b4d;
+    color: #ffffff;
+}
+
+.cvc-icon-dark {
+    background-color: #1f3438;
+    color: #ffffff;
+}
+
+.cvc-icon-half {
+    background: conic-gradient(#1f3438 0deg 180deg, transparent 180deg 360deg);
+    border: 1px solid #1f3438;
+    color: #ffffff;
+}
+
+.cvc-icon-empty {
+    background-color: #ffffff;
+    border: 1px solid #cfcabc;
+    color: #9a9a9a;
+}
+
+@media (max-width: 900px) {
+    .cvc-row {
+        align-items: flex-start;
+    }
+
+    .cvc-label-desc {
+        max-width: 100%;
+    }
+
+    .cvc-col {
+        flex: 0 0 100px;
+    }
+
+    .cvc-thumb {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cvc-col-title {
+        font-size: 14px;
+    }
+}
+
 /* What's Included */
 
 .whats-included {
@@ -2539,5 +2865,361 @@ header {
 @media (max-width: 900px) {
     .whats-included-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Questions? We Have Answers. */
+
+.faq {
+    margin-top: 0;
+    padding: 80px 20px;
+    background-color: #f7e6c1;
+}
+
+.faq-inner {
+    width: fit-content;
+    margin: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.faq-title {
+    flex: 0 0 301px;
+    width: 301px;
+    font-family: "Suisse Works", Georgia, serif;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #1f3438;
+    margin: 0;
+}
+
+.faq-accordion {
+    flex: 0 0 859px;
+    width: 859px;
+    border-top: 1px solid #cbb98a;
+}
+
+.faq-item {
+    border-bottom: 1px solid #cbb98a;
+}
+
+.faq-item-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    padding: 26px 0;
+    font-family: "Moderat", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f3438;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq-item-header span {
+    padding: 0 40px 0 0;
+}
+
+.faq-item-icon {
+    flex: none;
+    font-size: 15px;
+    color: #1f3438;
+}
+
+.faq-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item-body p {
+    font-family: "Moderat", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1f3438;
+    margin: 0 0 26px;
+}
+
+.faq-item-active .faq-item-body {
+    max-height: 260px;
+}
+
+@media (max-width: 900px) {
+    .faq-inner {
+        flex-direction: column;
+        margin: 0;
+        gap: 32px;
+    }
+
+    .faq-title {
+        flex: none;
+        width: 100%;
+    }
+
+    .faq-accordion {
+        flex: none;
+        width: 100%;
+    }
+}
+
+/* Discover Clean Kitchenware */
+
+#discover-clean {
+    max-width: 1400px;
+    margin: 60px auto 0;
+    padding: 0 40px 60px;
+    box-sizing: border-box;
+}
+
+.dc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.dc-title {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.carousel-arrows {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.carousel-arrow {
+    border: none;
+    background: none;
+    color: #1a1a1a;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.carousel-track {
+    overflow: hidden;
+}
+
+.carousel-track .swiper-slide {
+    width: 286.5px;
+    height: auto;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    position: relative;
+}
+
+.product-image {
+    position: relative;
+    background-color: #f2f0ea;
+    width: 286.5px;
+    height: 382.67px;
+    margin-bottom: 16px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.product-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-image-hover {
+    opacity: 1;
+}
+
+.dc-tags {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    gap: 8px;
+    z-index: 1;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.badge-save {
+    background-color: #9c3b2e;
+    color: #fff;
+}
+
+.badge-save-inline {
+    padding: 3px 8px;
+    font-size: 10px;
+}
+
+.badge-tag-gift {
+    background-color: #f0deb3;
+    color: #1a1a1a;
+}
+
+.badge-tag-loved {
+    background-color: #f4d3d6;
+    color: #1a1a1a;
+}
+
+.badge-tag-trending {
+    background-color: #faeec2;
+    color: #1a1a1a;
+}
+
+.dc-entries {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.dc-entries-multiplier {
+    background-color: #1f3438;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 12px;
+}
+
+.dc-entries-label {
+    flex: 1;
+    background-color: #c9dcea;
+    color: #1a1a1a;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+.product-name {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.product-rating {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.product-rating span {
+    color: #4a4a4a;
+    letter-spacing: normal;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.price-was {
+    color: #8a8a8a;
+    text-decoration: line-through;
+}
+
+.price-now {
+    font-weight: 700;
+}
+
+.price-percent {
+    color: #4a4a4a;
+    font-size: 13px;
+}
+
+.product-swatches {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.swatch-glossy {
+    position: relative;
+    overflow: hidden;
+    background-image:
+        radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 50%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.18));
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.swatch-glossy::after {
+    content: "";
+    position: absolute;
+    top: 14%;
+    bottom: 14%;
+    left: 50%;
+    width: 24%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    background: linear-gradient(to right, #797d81 0%, #e9e9e9 33%, #ffffff 50%, #cfcfcf 66%, #6b6f73 100%);
+}
+
+.swatch-active {
+    outline: 1px solid #1a1a1a;
+    outline-offset: 2px;
+}
+
+.swatch-more {
+    margin-left: 4px;
+    font-size: 12px;
+    color: #8a8a8a;
+}
+
+.product-desc {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    #discover-clean {
+        padding: 0 20px 40px;
     }
 }
