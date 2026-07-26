@@ -1301,13 +1301,15 @@ header {
 .footer-bottom-left {
     display: flex;
     flex-direction: column;
-    width: 1142.55px;
+    max-width: 1142.55px;
+    width: 100%;
     height: 72px;
 }
 
 .footer-disclaimer {
     display: block;
-    width: 1142.55px;
+    max-width: 1142.55px;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.2;
@@ -1485,7 +1487,9 @@ header {
     .mega-menu-inner {
         max-width: 92%;
     }
+}
 
+@media (max-width: 1439px) {
     .site-footer {
         width: 100%;
         height: auto;
@@ -1660,6 +1664,8 @@ header {
 
 .pdp-gallery {
     flex: 1 1 55%;
+    position: sticky;
+    top: 208px;
 }
 
 .pdp-gallery-main {
@@ -1673,6 +1679,16 @@ header {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.pdp-gallery-img-transitioning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
 .pdp-gallery-arrow {
@@ -1736,6 +1752,16 @@ header {
 .pdp-info {
     flex: 1 1 40%;
     max-width: 480px;
+    position: sticky;
+    top: 208px;
+    max-height: calc(100vh - 228px);
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.pdp-info::-webkit-scrollbar {
+    display: none;
 }
 
 .pdp-badge {
@@ -1842,6 +1868,14 @@ header {
     border: none;
     border-top: 1px solid #e5e0d5;
     margin: 20px 0;
+}
+
+@media (max-width: 480px) {
+    .pdp-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }
 
 .pdp-select-block {
@@ -2059,15 +2093,282 @@ header {
         flex-direction: column;
     }
 
+    .pdp-gallery {
+        position: static;
+    }
+
     .pdp-info {
         max-width: 100%;
+        position: static;
+        max-height: none;
+        overflow-y: visible;
     }
+}
+
+.pdp-promo {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 20px;
+    padding: 18px 20px;
+    border-radius: 8px;
+    background-color: #dbe4ee;
+}
+
+.pdp-promo-icon {
+    flex: none;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.pdp-promo-title {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.pdp-promo-desc {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #3a3a3a;
+    margin-bottom: 8px;
+}
+
+.pdp-promo-link {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+.pdp-safety-row {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e0d5;
+}
+
+.pdp-safety-dot {
+    color: #a8a196;
+}
+
+.pdp-safety-link {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+.pdp-info-item {
+    border-bottom: 1px solid #e5e0d5;
+}
+
+.pdp-info-item-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: none;
+    border: none;
+    padding: 18px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: left;
+    cursor: pointer;
+}
+
+.pdp-info-item-icon {
+    flex: none;
+    font-size: 13px;
+    color: #1a1a1a;
+}
+
+.pdp-info-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.pdp-info-item-body p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin: 0 0 18px;
+}
+
+.pdp-info-item-active .pdp-info-item-body {
+    max-height: 3000px;
+}
+
+.pdp-info-list {
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+}
+
+.pdp-info-list li {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.pdp-info-list li strong {
+    color: #1a1a1a;
+}
+
+.pdp-included-spec {
+    margin-bottom: 18px;
+}
+
+.pdp-included-name {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-decoration: underline;
+    margin-bottom: 6px;
+}
+
+.pdp-included-spec ul {
+    list-style: disc;
+    padding-left: 18px;
+    margin: 0;
+}
+
+.pdp-included-spec li {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+.pdp-info-see-more {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: underline;
+    margin-bottom: 18px;
+}
+
+.pdp-notox-box {
+    border: 1px solid #e5e0d5;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.pdp-notox-box p {
+    margin-bottom: 14px !important;
+}
+
+.pdp-notox-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pdp-notox-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #d8d2c4;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+.pdp-notox-pill i {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.pdp-info-steps {
+    padding-left: 18px;
+    margin: 0 0 12px;
+}
+
+.pdp-info-steps li {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 14px;
+}
+
+.pdp-info-steps li strong {
+    color: #1a1a1a;
+}
+
+.pdp-info-more-link {
+    margin-bottom: 18px !important;
+}
+
+.pdp-info-more-link a {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+.pdp-review {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e5e0d5;
+}
+
+.pdp-review .pdp-stars {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.pdp-review-name {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2px !important;
+}
+
+.pdp-review-name span {
+    font-weight: 400;
+    color: #767676;
+    margin-left: 6px;
+}
+
+.pdp-review-title {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px !important;
+}
+
+.pdp-review-text {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 0 !important;
 }
 
 .pdp-disclaimer-row {
     max-width: 1400px;
     margin: 20px auto 0;
-    padding: 0 40px;
     display: flex;
     gap: 60px;
 }
@@ -2211,7 +2512,7 @@ header {
     display: block;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1220px) {
     .cc-inner {
         flex-direction: column;
         gap: 32px;
@@ -2574,7 +2875,9 @@ header {
 
 .cvc-table {
     width: fit-content;
+    max-width: 100%;
     margin: 0 auto;
+    overflow-x: auto;
 }
 
 .cvc-row {
@@ -2864,7 +3167,58 @@ header {
 
 @media (max-width: 900px) {
     .whats-included-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .whats-included-tabs {
+        justify-content: flex-start;
+        gap: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whats-included-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .cvc {
+        padding: 40px 16px;
+    }
+
+    .cvc-label-cell {
+        flex: 0 0 110px;
+        width: 110px;
+        padding: 16px 8px 16px 0;
+    }
+
+    .cvc-label-title {
+        font-size: 16px;
+    }
+
+    .cvc-label-desc {
+        font-size: 11px;
+    }
+
+    .cvc-col {
+        flex: 0 0 75px;
+    }
+
+    .cvc-thumb {
+        width: 52px;
+        height: 40px;
+    }
+
+    .cvc-col-title {
+        font-size: 11px;
+        max-width: 75px;
+    }
+
+    .cvc-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 11px;
     }
 }
 
@@ -2948,7 +3302,7 @@ header {
     max-height: 260px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
     .faq-inner {
         flex-direction: column;
         margin: 0;

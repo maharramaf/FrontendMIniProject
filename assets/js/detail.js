@@ -213,24 +213,60 @@ const pdpGalleryThumbs = document.querySelectorAll(".pdp-gallery-thumb");
 if (pdpGalleryImg && pdpGalleryThumbs.length > 0) {
 
     let activeThumb = 0;
+    let currentImg = pdpGalleryImg;
+    let isAnimating = false;
+    const pdpGalleryStage = pdpGalleryImg.parentElement;
 
-    function showSlide(index) {
-        activeThumb = (index + pdpGalleryThumbs.length) % pdpGalleryThumbs.length;
-        const thumb = pdpGalleryThumbs[activeThumb];
+    function showSlide(index, direction) {
 
-        pdpGalleryImg.setAttribute("src", thumb.dataset.full);
+        const nextIndex = (index + pdpGalleryThumbs.length) % pdpGalleryThumbs.length;
+
+        if (isAnimating || nextIndex === activeThumb) {
+            return;
+        }
+
+        isAnimating = true;
+
+        const thumb = pdpGalleryThumbs[nextIndex];
+        const outgoing = currentImg;
+        const incoming = outgoing.cloneNode();
+        incoming.setAttribute("src", thumb.dataset.full);
+
+        pdpGalleryStage.style.height = pdpGalleryStage.offsetHeight + "px";
+
+        [outgoing, incoming].forEach((img) => img.classList.add("pdp-gallery-img-transitioning"));
+        incoming.style.transform = direction === "prev" ? "translateX(-100%)" : "translateX(100%)";
+
+        pdpGalleryStage.insertBefore(incoming, outgoing.nextSibling);
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                outgoing.style.transform = direction === "prev" ? "translateX(100%)" : "translateX(-100%)";
+                incoming.style.transform = "translateX(0)";
+            });
+        });
+
+        incoming.addEventListener("transitionend", () => {
+            outgoing.remove();
+            incoming.classList.remove("pdp-gallery-img-transitioning");
+            incoming.style.transform = "";
+            pdpGalleryStage.style.height = "";
+            currentImg = incoming;
+            isAnimating = false;
+        }, { once: true });
 
         pdpGalleryThumbs.forEach((t) => t.classList.remove("pdp-gallery-thumb-active"));
         thumb.classList.add("pdp-gallery-thumb-active");
+        activeThumb = nextIndex;
     }
 
     pdpGalleryThumbs.forEach((thumb, index) => {
-        thumb.addEventListener("click", () => showSlide(index));
+        thumb.addEventListener("click", () => showSlide(index, index > activeThumb ? "next" : "prev"));
     });
 
     if (pdpGalleryPrev && pdpGalleryNext) {
-        pdpGalleryPrev.addEventListener("click", () => showSlide(activeThumb - 1));
-        pdpGalleryNext.addEventListener("click", () => showSlide(activeThumb + 1));
+        pdpGalleryPrev.addEventListener("click", () => showSlide(activeThumb - 1, "prev"));
+        pdpGalleryNext.addEventListener("click", () => showSlide(activeThumb + 1, "next"));
     }
 
 }
@@ -299,6 +335,35 @@ wiCardVideos.forEach((video) => {
     card.addEventListener("mouseleave", () => {
         video.pause();
         video.currentTime = 0;
+    });
+
+});
+
+/* PDP sidebar info accordion (Overview, Features & Benefits, etc.) */
+const pdpInfoItems = document.querySelectorAll(".pdp-info-item");
+
+pdpInfoItems.forEach((item) => {
+
+    const header = item.querySelector(".pdp-info-item-header");
+    const icon = item.querySelector(".pdp-info-item-icon");
+
+    header.addEventListener("click", () => {
+
+        const isActive = item.classList.contains("pdp-info-item-active");
+
+        pdpInfoItems.forEach((otherItem) => {
+            otherItem.classList.remove("pdp-info-item-active");
+            const otherIcon = otherItem.querySelector(".pdp-info-item-icon");
+            otherIcon.classList.remove("fa-minus");
+            otherIcon.classList.add("fa-plus");
+        });
+
+        if (!isActive) {
+            item.classList.add("pdp-info-item-active");
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+        }
+
     });
 
 });

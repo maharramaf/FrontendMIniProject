@@ -1359,7 +1359,8 @@ header {
     font-size: 34px;
     font-weight: 400;
     white-space: nowrap;
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     height: 40px;
     margin-bottom: 60px;
 }
@@ -1727,7 +1728,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     margin: 0 auto 40px;
 }
 
@@ -1743,7 +1745,8 @@ header {
 }
 
 .category-track {
-    width: 1340px;
+    max-width: 1340px;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -1940,7 +1943,8 @@ header {
     display: flex;
     align-items: center;
     gap: 28px;
-    width: 1345px;
+    max-width: 1345px;
+    width: 100%;
     height: 486px;
     padding: 0 50px;
     margin: 0 auto;
@@ -2134,8 +2138,8 @@ header {
     font-size: 28px;
     font-weight: 700;
     color: #1f3438;
-    width: 560px;
-    height: 40px;
+    max-width: 560px;
+    width: 100%;
     margin-bottom: 22px;
 }
 
@@ -2144,16 +2148,9 @@ header {
     font-size: 16px;
     line-height: 1.5;
     color: #1f3438;
-    width: 560px;
+    max-width: 560px;
+    width: 100%;
     margin-bottom: 22px;
-}
-
-.transparency-text-1 {
-    height: 72px;
-}
-
-.transparency-text-2 {
-    height: 48px;
 }
 
 .transparency-link {
@@ -2172,8 +2169,8 @@ header {
     display: flex;
     flex-direction: column;
     gap: 18px;
-    width: 560px;
-    height: 152px;
+    max-width: 560px;
+    width: 100%;
     margin-bottom: 30px;
 }
 
@@ -2236,7 +2233,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     height: 60px;
     margin: 0 auto;
 }
@@ -2448,6 +2446,23 @@ header {
     text-decoration: underline;
 }
 
+@media (max-width: 1439px) {
+    .footer-top {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .footer-newsletter {
+        flex: 1 1 100%;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        row-gap: 32px;
+        flex: 1 1 100%;
+    }
+}
+
 .footer-bottom {
     padding: 0 0 40px;
     display: flex;
@@ -2459,13 +2474,15 @@ header {
 .footer-bottom-left {
     display: flex;
     flex-direction: column;
-    width: 1142.55px;
+    max-width: 1142.55px;
+    width: 100%;
     height: 72px;
 }
 
 .footer-disclaimer {
     display: block;
-    width: 1142.55px;
+    max-width: 1142.55px;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.2;
@@ -2888,6 +2905,10 @@ header {
     .enter-steps {
         flex-direction: column;
         gap: 32px;
+    }
+
+    .enter-step {
+        flex: 0 0 auto;
     }
 
     /* Product carousel */
